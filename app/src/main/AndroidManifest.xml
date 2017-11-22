@@ -16,7 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashActivity"></activity>
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".fragment.HomeMenuFragment" />
+        <activity android:name=".adapter.HomeMenuAdapter" />
+        <activity android:name=".AnalysisActivity" />
+        <activity android:name=".NoticeActivity" />
+        <activity android:name=".TotalScoreActivity" />
+        <activity android:name=".DangerActivity" />
+        <activity android:name=".GroupKakaoActivity" />
+        <activity android:name=".InjuryInformationActivity" />
+        <activity android:name=".GuideActivity" />
+        <activity android:name=".KakaoQuestionActivity" />
+        <activity android:name=".ServiceCenterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SingUpActivity" />
+        <activity android:name=".WritePostingActivity" />
+        <activity android:name=".WriteLoginActivity"></activity>
     </application>
 
 </manifest>

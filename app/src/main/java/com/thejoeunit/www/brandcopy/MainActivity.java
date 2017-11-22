@@ -1,15 +1,33 @@
 package com.thejoeunit.www.brandcopy;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends BaseActivity {
+
+    private android.widget.ImageView analysisIMG;
+    private android.widget.ImageView noticeIMG;
+    private android.widget.ImageView totalScoreIMG;
+    private android.widget.ImageView dangerIMG;
+    private android.widget.ImageView groupKakaoIMG;
+    private android.widget.ImageView InjuryIMG;
+    private android.widget.ImageView gulieIMG;
+    private android.widget.ImageView kakaoQuestionIMG;
+    private android.widget.ImageView serviceCenterIMG;
+    private android.widget.ImageView backIMG;
+    private android.widget.ImageView homeIMG;
+    private android.widget.ImageView refreshIMG;
+    private android.widget.ImageView loginIMG;
+    private android.widget.ImageView setIMG;
+    private android.widget.ImageView offIMG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         bindViews();
         setupEvents();
         setValues();
@@ -17,6 +35,17 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+
+        totalScoreIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_WEB_SEARCH);
+                intent.setData(Uri.parse("https://www.flashscore.co.kr/"));
+                startActivity(intent);
+            }
+        });
+
 
     }
 
@@ -27,6 +56,22 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void bindViews() {
+        this.offIMG = (ImageView) findViewById(R.id.offIMG);
+        this.setIMG = (ImageView) findViewById(R.id.setIMG);
+        this.loginIMG = (ImageView) findViewById(R.id.loginIMG);
+        this.refreshIMG = (ImageView) findViewById(R.id.refreshIMG);
+        this.homeIMG = (ImageView) findViewById(R.id.homeIMG);
+        this.backIMG = (ImageView) findViewById(R.id.backIMG);
+        this.serviceCenterIMG = (ImageView) findViewById(R.id.serviceCenterIMG);
+        this.kakaoQuestionIMG = (ImageView) findViewById(R.id.kakaoQuestionIMG);
+        this.gulieIMG = (ImageView) findViewById(R.id.gulieIMG);
+        this.InjuryIMG = (ImageView) findViewById(R.id.InjuryIMG);
+        this.groupKakaoIMG = (ImageView) findViewById(R.id.groupKakaoIMG);
+        this.dangerIMG = (ImageView) findViewById(R.id.dangerIMG);
+        this.totalScoreIMG = (ImageView) findViewById(R.id.totalScoreIMG);
+        this.noticeIMG = (ImageView) findViewById(R.id.noticeIMG);
+        this.analysisIMG = (ImageView) findViewById(R.id.analysisIMG);
+
 
     }
 }

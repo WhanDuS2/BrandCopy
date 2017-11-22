@@ -1,5 +1,7 @@
 package com.thejoeunit.www.brandcopy;
 
+import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -17,6 +19,7 @@ public class SingUpActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+
 
     }
 

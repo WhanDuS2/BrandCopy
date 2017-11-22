@@ -33,6 +33,7 @@
 
 
     <LinearLayout
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -42,7 +43,7 @@
         <ImageView
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@drawable/red_star" />
 
         <TextView
             android:layout_width="match_parent"
@@ -73,6 +74,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -82,7 +84,7 @@
         <ImageView
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@drawable/red_star" />
 
         <TextView
             android:layout_width="match_parent"
@@ -121,6 +123,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -130,7 +133,7 @@
         <ImageView
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@drawable/red_star" />
 
         <TextView
             android:layout_width="match_parent"
@@ -162,6 +165,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
@@ -171,7 +175,7 @@
         <ImageView
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@drawable/red_star" />
 
         <TextView
             android:layout_width="match_parent"
@@ -201,6 +205,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
@@ -210,7 +215,7 @@
         <ImageView
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@drawable/red_star" />
 
         <TextView
             android:layout_width="match_parent"
@@ -240,6 +245,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
@@ -249,14 +255,17 @@
         <ImageView
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@drawable/red_star" />
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="15dp"
             android:layout_marginLeft="3dp"
             android:text="닉네임"
             android:textColor="#000000" />
+
+
 
     </LinearLayout>
 
@@ -279,6 +288,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -288,7 +298,7 @@
         <ImageView
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@drawable/red_star" />
 
         <TextView
             android:layout_width="match_parent"
@@ -317,9 +327,13 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
 
         <Button
-            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/button_drawble"

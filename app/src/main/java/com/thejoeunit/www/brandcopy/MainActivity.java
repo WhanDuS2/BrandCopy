@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends BaseActivity {
 
@@ -23,6 +24,8 @@ public class MainActivity extends BaseActivity {
     private android.widget.ImageView loginIMG;
     private android.widget.ImageView setIMG;
     private android.widget.ImageView offIMG;
+    private android.widget.TextView textView2;
+    private ImageView injuryIMG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,14 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+
+        loginIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
         totalScoreIMG.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,13 +76,13 @@ public class MainActivity extends BaseActivity {
         this.serviceCenterIMG = (ImageView) findViewById(R.id.serviceCenterIMG);
         this.kakaoQuestionIMG = (ImageView) findViewById(R.id.kakaoQuestionIMG);
         this.gulieIMG = (ImageView) findViewById(R.id.gulieIMG);
-        this.InjuryIMG = (ImageView) findViewById(R.id.InjuryIMG);
+        this.injuryIMG = (ImageView) findViewById(R.id.injuryIMG);
         this.groupKakaoIMG = (ImageView) findViewById(R.id.groupKakaoIMG);
         this.dangerIMG = (ImageView) findViewById(R.id.dangerIMG);
+        this.textView2 = (TextView) findViewById(R.id.textView2);
         this.totalScoreIMG = (ImageView) findViewById(R.id.totalScoreIMG);
         this.noticeIMG = (ImageView) findViewById(R.id.noticeIMG);
         this.analysisIMG = (ImageView) findViewById(R.id.analysisIMG);
-
 
     }
 }

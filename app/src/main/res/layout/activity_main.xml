@@ -4,63 +4,115 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A0A0A2"
     android:orientation="vertical"
     tools:context="com.thejoeunit.www.brandcopy.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="110dp"
         android:layout_gravity="center_vertical"
+        android:background="@drawable/fm_logo"
         android:orientation="horizontal">
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:background="#4C4C4C" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="25dp"
         android:orientation="horizontal"
         android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/analysisIMG"
+        <LinearLayout
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="150dp"
-            android:padding="3dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/analysisIMG"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="3dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="경기 분석" />
 
 
-        <ImageView
-            android:id="@+id/noticeIMG"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="3dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/noticeIMG"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="3dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="공지사항" />
 
 
-        <ImageView
-            android:id="@+id/totalScoreIMG"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="150dp"
-            android:padding="3dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/totalScoreIMG"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="3dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:textColor="#000000"
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스코어확인" />
+
+
+        </LinearLayout>
 
 
     </LinearLayout>
 
 
     <TextView
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="15dp"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginRight="15dp"
-        android:background="#FFFFFF" />
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:background="#4C4C4C" />
 
 
     <LinearLayout
@@ -70,43 +122,86 @@
         android:orientation="horizontal"
         android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/dangerIMG"
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="3dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/dangerIMG"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="3dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="먹튀검증" />
 
 
-        <ImageView
-            android:id="@+id/groupKakaoIMG"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="3dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/groupKakaoIMG"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="3dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가족방 참여" />
 
 
-        <ImageView
-            android:id="@+id/InjuryIMG"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="3dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/injuryIMG"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="3dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="결장자 정보" />
+
+
+        </LinearLayout>
 
 
     </LinearLayout>
 
 
     <TextView
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="15dp"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginRight="15dp"
-        android:background="#FFFFFF" />
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#4C4C4C" />
 
 
     <LinearLayout
@@ -116,47 +211,89 @@
         android:orientation="horizontal"
         android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/gulieIMG"
+        <LinearLayout
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="150dp"
-            android:padding="3dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/gulieIMG"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="3dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="초보자 가이드" />
 
 
+        </LinearLayout>
 
-
-        <ImageView
-            android:id="@+id/kakaoQuestionIMG"
+        <LinearLayout
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="150dp"
-            android:padding="3dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/kakaoQuestionIMG"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="3dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1:1문의\n바로가기" />
 
 
-        <ImageView
-            android:id="@+id/serviceCenterIMG"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="3dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/serviceCenterIMG"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="3dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="고객 센터" />
+
+
+        </LinearLayout>
 
 
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_weight="1"
-        android:layout_height="0dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <LinearLayout
+        android:backgroundTint="#EEEEEE"
         android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:background="@drawable/kakao"
-        android:orientation="horizontal"
-        android:layout_height="50dp">
+        android:orientation="horizontal">
 
     </LinearLayout>
 
@@ -294,9 +431,6 @@
 
 
     </LinearLayout>
-
-
-
 
 
 </LinearLayout>

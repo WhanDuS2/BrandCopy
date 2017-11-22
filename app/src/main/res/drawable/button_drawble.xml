@@ -21,7 +21,7 @@
                     <corners
                         android:radius="9dp" />
                     <solid
-                        android:color="#35B27B" />
+                        android:color="#FEE8AC" />
                 </shape>
             </item>
         </layer-list>

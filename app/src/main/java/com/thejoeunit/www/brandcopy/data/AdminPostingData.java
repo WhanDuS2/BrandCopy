@@ -8,6 +8,7 @@ import java.util.Calendar;
 
 public class AdminPostingData {
 
+
     private String nickName;
     private int Views;
     private String Writer;

@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.thejoeunit.www.brandcopy.AnalysisActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/fm_logo"
+        android:layout_height="70dp" />
+
     <ListView
         android:id="@+id/analysisLisTView"
         android:layout_width="wrap_content"

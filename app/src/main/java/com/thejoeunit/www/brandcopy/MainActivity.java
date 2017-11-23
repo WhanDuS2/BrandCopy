@@ -112,7 +112,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_WEB_SEARCH);
+                intent.setAction(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("https://www.flashscore.co.kr/"));
                 startActivity(intent);
             }

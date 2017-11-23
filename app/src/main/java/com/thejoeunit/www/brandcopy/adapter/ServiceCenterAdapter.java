@@ -7,11 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 
 import com.thejoeunit.www.brandcopy.R;
-import com.thejoeunit.www.brandcopy.data.AdminPostingData;
-import com.thejoeunit.www.brandcopy.data.UserPostingData;
+import com.thejoeunit.www.brandcopy.data.PostingData;
 
 import java.util.List;
 
@@ -19,13 +17,13 @@ import java.util.List;
  * Created by the on 2017-11-21.
  */
 
-public class ServiceCenterAdapter extends ArrayAdapter<UserPostingData> {
+public class ServiceCenterAdapter extends ArrayAdapter<PostingData> {
 
     Context mContext;
-    List<UserPostingData> mList;
+    List<PostingData> mList;
     LayoutInflater inf;
 
-    public ServiceCenterAdapter(Context context, List<UserPostingData> list) {
+    public ServiceCenterAdapter(Context context, List<PostingData> list) {
         super(context, R.layout.service_center_list_item, list);
         mContext = context;
         mList = list;

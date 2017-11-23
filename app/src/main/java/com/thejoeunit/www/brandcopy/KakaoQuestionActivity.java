@@ -3,6 +3,8 @@ package com.thejoeunit.www.brandcopy;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.thejoeunit.www.brandcopy.zoom.ZoomInOut;
+
 public class KakaoQuestionActivity extends BaseActivity {
 
     @Override

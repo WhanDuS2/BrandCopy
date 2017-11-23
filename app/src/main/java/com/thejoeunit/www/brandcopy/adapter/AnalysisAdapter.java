@@ -7,10 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 
 import com.thejoeunit.www.brandcopy.R;
-import com.thejoeunit.www.brandcopy.data.AdminPostingData;
+import com.thejoeunit.www.brandcopy.data.PostingData;
 
 import java.util.List;
 
@@ -18,13 +17,13 @@ import java.util.List;
  * Created by the on 2017-11-21.
  */
 
-public class AnalysisAdapter extends ArrayAdapter<AdminPostingData> {
+public class AnalysisAdapter extends ArrayAdapter<PostingData> {
 
     Context mContext;
-    List<AdminPostingData> mList;
+    List<PostingData> mList;
     LayoutInflater inf;
 
-    public AnalysisAdapter(Context context, List<AdminPostingData> list) {
+    public AnalysisAdapter(Context context, List<PostingData> list) {
         super(context, R.layout.analysis_list_item, list);
         mContext = context;
         mList = list;

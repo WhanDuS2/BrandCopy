@@ -7,11 +7,11 @@
     android:layout_height="match_parent"
     tools:context="com.thejoeunit.www.brandcopy.GuideActivity">
 
-    <ImageView
+    <TextView
         android:layout_width="match_parent"
-        android:src="@drawable/fm_logo"
-        android:layout_height="70dp" />
-    
+        android:textStyle="bold"
+        android:text="안녕하세요 FM픽입니다."
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

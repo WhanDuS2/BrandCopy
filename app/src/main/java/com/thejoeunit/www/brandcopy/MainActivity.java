@@ -39,6 +39,67 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        serviceCenterIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, ServiceCenterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        gulieIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, GuideActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        injuryIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, InjuryInformationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        groupKakaoIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, GroupKakaoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        dangerIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, DangerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        analysisIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, AnalysisActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        noticeIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, NoticeActivity.class);
+                startActivity(intent);
+            }
+        });
+
         loginIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

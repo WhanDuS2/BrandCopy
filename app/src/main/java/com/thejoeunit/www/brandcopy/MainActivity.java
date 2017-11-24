@@ -39,6 +39,22 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        backIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        loginIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
         serviceCenterIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,7 +129,7 @@ public class MainActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.flashscore.co.kr/"));
+                intent.setData(Uri.parse("https://www.livescroe.co.kr/"));
                 startActivity(intent);
             }
         });
@@ -131,8 +147,6 @@ public class MainActivity extends BaseActivity {
         this.offIMG = (ImageView) findViewById(R.id.offIMG);
         this.setIMG = (ImageView) findViewById(R.id.setIMG);
         this.loginIMG = (ImageView) findViewById(R.id.loginIMG);
-        this.refreshIMG = (ImageView) findViewById(R.id.refreshIMG);
-        this.homeIMG = (ImageView) findViewById(R.id.homeIMG);
         this.backIMG = (ImageView) findViewById(R.id.backIMG);
         this.serviceCenterIMG = (ImageView) findViewById(R.id.serviceCenterIMG);
         this.kakaoQuestionIMG = (ImageView) findViewById(R.id.kakaoQuestionIMG);

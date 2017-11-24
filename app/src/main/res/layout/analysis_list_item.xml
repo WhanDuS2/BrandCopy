@@ -31,26 +31,47 @@
                 android:text="제목이 들어올 자리" />
 
             <LinearLayout
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="15dp"
+                    android:src="@drawable/time_icon"
+                    android:layout_height="15dp" />
+
                 <TextView
+                    android:layout_marginLeft="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="데이터" />
+                    android:text="작성시간" />
+
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:src="@drawable/by_icon"
+                    android:layout_height="15dp" />
 
 
                 <TextView
+                    android:layout_marginLeft="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.01"
                     android:text="글쓴이" />
 
+                <ImageView
+                    android:layout_width="15dp"
+                    android:src="@drawable/view_icon"
+                    android:layout_height="15dp" />
+
+
 
                 <TextView
+                    android:layout_marginLeft="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

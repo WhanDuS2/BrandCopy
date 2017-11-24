@@ -311,10 +311,11 @@
             android:tag="0">
 
             <ImageView
+                android:padding="3dp"
                 android:id="@+id/backIMG"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:src="@drawable/back_ico" />
+                android:src="@drawable/back_icon" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -323,47 +324,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:tag="1">
 
-            <ImageView
-                android:id="@+id/homeIMG"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/home_icon" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="홈" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:tag="2">
-
-            <ImageView
-                android:id="@+id/refreshIMG"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/refresh_icon" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="새로고침" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -403,7 +364,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="설정" />
+                android:text="Push설정" />
 
         </LinearLayout>
 

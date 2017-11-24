@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.emrekose.pinchzoom.Touch;
-
 public class GroupKakaoActivity extends BaseActivity {
 
     private android.widget.ImageView imageView2;

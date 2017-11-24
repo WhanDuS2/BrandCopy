@@ -56,4 +56,11 @@ public class ServiceCenterAdapter extends ArrayAdapter<PostingData> {
     public int getCount() {
         return 20;
     }
+
+    /**
+     * Created by the on 2017-11-21.
+     */
+
+    public static class NoticeAdapter {
+    }
 }

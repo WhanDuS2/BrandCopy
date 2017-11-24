@@ -28,20 +28,22 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/userGuliePhotoOne"
                 android:layout_width="match_parent"
-                android:layout_height="270dp"
+                android:layout_height="290dp"
                 android:src="@drawable/usergulie_one" />
 
             <ImageView
+                android:id="@+id/userGuliePhotoTwo"
                 android:layout_width="match_parent"
-                android:layout_height="290dp"
+                android:layout_height="310dp"
                 android:layout_marginTop="2dp"
                 android:src="@drawable/usergulie_two" />
 
             <ImageView
+                android:id="@+id/userGuliePhotoThree"
                 android:layout_width="match_parent"
-                android:layout_height="415dp"
+                android:layout_height="435dp"
                 android:layout_marginTop="2dp"
                 android:src="@drawable/usergulie_three" />
 
@@ -50,14 +52,6 @@
 
 
     </ScrollView>
-
-
-    <com.github.chrisbanes.photoview.PhotoView
-        android:id="@+id/kakaofamilyIMG"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/kakao_familyroomguile"
-        android:visibility="gone" />
 
 
 </LinearLayout>

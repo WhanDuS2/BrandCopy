@@ -30,7 +30,10 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SingUpActivity" />
         <activity android:name=".WritePostingActivity" />
-        <activity android:name=".WriteLoginActivity"></activity>
+        <activity android:name=".WriteLoginActivity" />
+        <activity android:name=".usergulie_activity.UserGulieActivityOne" />
+        <activity android:name=".usergulie_activity.UserGulieActivityTwo" />
+        <activity android:name=".usergulie_activity.UserGulieActivityThree"></activity>
     </application>
 
 </manifest>

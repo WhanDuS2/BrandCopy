@@ -7,15 +7,89 @@
     android:layout_height="match_parent"
     tools:context="com.thejoeunit.www.brandcopy.DangerActivity">
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:src="@drawable/fm_logo"
-        android:layout_height="70dp" />
+        android:orientation="horizontal"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="20dp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:src="@drawable/fm_logo"
+            android:layout_height="70dp" />
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/wrtie_icon"
+            android:layout_height="40dp" />
+
+
+    </LinearLayout>
+
 
     <ListView
         android:id="@+id/dangerListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="0dp"
+        android:layout_weight="1"></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/write_activity_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:entries="@array/searchfillter"></Spinner>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="1dp"
+            android:background="#D4D4D4"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="3"
+            android:background="#00000000"
+            android:hint=""
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/write_activity_background"
+            android:gravity="center"
+            android:text="검색"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="searchfillter">
+        <item >제목</item>
+        <item >내용</item>
+        <item >픽스터 이름</item>
+
+    </string-array>
+</resources>
+
+

@@ -23,8 +23,7 @@ public class AnalysisActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analysis);
 
-        this.goWrtieBtn = (Button) findViewById(R.id.goWrtieBtn);
-        this.analysisLisTView = (ListView) findViewById(R.id.analysisLisTView);
+
 
         bindViews();
         setupEvents();
@@ -47,6 +46,7 @@ public class AnalysisActivity extends BaseActivity {
     @Override
     public void bindViews() {
         this.analysisLisTView = (ListView) findViewById(R.id.analysisLisTView);
+        this.goWrtieBtn = (Button) findViewById(R.id.goWrtieBtn);
 
 
     }

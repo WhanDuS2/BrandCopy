@@ -35,9 +35,6 @@ public class GroupKakaoActivity extends BaseActivity {
     @Override
     public void bindViews() {
 
-        this.layout = (LinearLayout) findViewById(R.id.layout);
-        this.imageView3 = (ImageView) findViewById(R.id.imageView3);
-        this.imageView = (ImageView) findViewById(R.id.imageView);
-        this.imageView2 = (ImageView) findViewById(R.id.imageView2);
+
     }
 }

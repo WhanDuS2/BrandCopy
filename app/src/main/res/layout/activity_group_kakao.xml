@@ -13,76 +13,25 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
                 android:background="#FAE100"
                 android:gravity="center"
                 android:text="가족방 참여방법(카카오톡 아이디)"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <LinearLayout
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/kakaofamilyIMG"
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="0dp"
-                        android:layout_height="270dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/guile_one" />
-
-                    <com.github.chrisbanes.photoview.PhotoView
-                        android:id="@+id/imageView"
-                        android:layout_width="0dp"
-                        android:layout_height="270dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/gulie_two" />
-
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginTop="15dp"
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-
-
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="0dp"
-                        android:layout_height="270dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/gulie_three" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="270dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/kakao_family" />
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-
-
-
+                android:layout_height="match_parent"
+                android:src="@drawable/kakao_familyroomguile" />
 
 
         </LinearLayout>

@@ -7,10 +7,155 @@
     android:layout_height="match_parent"
     tools:context="com.thejoeunit.www.brandcopy.WritePostingActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#EFEFEF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
 
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="게시판 글쓰기"
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:src="@drawable/red_star"
+            android:layout_height="18dp" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:text="작성자 : "
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:hint="작성자을 입력하세요"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:src="@drawable/red_star"
+            android:layout_height="18dp" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:text="글제목 : "
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:hint="글의 제목을 입력하세요"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:src="@drawable/red_star"
+            android:layout_height="18dp" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:text="글내용 : "
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:hint="\n\n\n\n\n\n\n\n\n글의 내용을 입력하세요\n\n\n\n\n\n\n\n" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="이미지 첨부"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="등록"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="취소"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

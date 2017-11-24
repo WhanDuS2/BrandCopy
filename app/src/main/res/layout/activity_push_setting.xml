@@ -15,10 +15,12 @@
         android:orientation="horizontal"
         android:padding="5dp">
 
+
         <TextView
             android:id="@+id/titleTxt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
             android:text="Push 설정"
@@ -60,16 +62,16 @@
 
 
         <Switch
-            android:layout_margin="20dp"
             android:id="@+id/pushSwich"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
             android:checked="true"
             android:text="푸쉬 알림 수신"
-            android:textSize="15sp"
             android:textOff="No"
-            android:textOn="Yes" />
+            android:textOn="Yes"
+            android:textSize="15sp" />
 
     </LinearLayout>
 
@@ -81,8 +83,6 @@
         android:layout_marginTop="20dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
-
-
 
 
     </LinearLayout>

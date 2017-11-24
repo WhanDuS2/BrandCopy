@@ -1,5 +1,7 @@
 package com.thejoeunit.www.brandcopy;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -39,6 +41,25 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        offIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder offNotice = new AlertDialog.Builder(MainActivity.this);
+                offNotice.setTitle ( " 종료 " );
+                offNotice.setMessage ( " 앱을 종료하시겠습니까? " );
+                offNotice.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                });
+                offNotice.setNegativeButton ( "취소", null );
+
+                offNotice.show();
+
+            }
+        });
+
         setIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,13 +68,6 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        backIMG.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mContext, MainActivity.class);
-                startActivity(intent);
-            }
-        });
 
         loginIMG.setOnClickListener(new View.OnClickListener() {
             @Override

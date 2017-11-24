@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BrandCopy.iml" filepath="$PROJECT_DIR$/BrandCopy.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/BrandCopy.iml" filepath="$PROJECT_DIR$/.idea/BrandCopy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../user/AndroidStudioProjects/BrandCopy/BrandCopy.iml" filepath="$PROJECT_DIR$/../../../user/AndroidStudioProjects/BrandCopy/BrandCopy.iml" />
+      <module fileurl="file://C:\Users\user\AndroidStudioProjects\BrandCopy\BrandCopy.iml" filepath="C:\Users\user\AndroidStudioProjects\BrandCopy\BrandCopy.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

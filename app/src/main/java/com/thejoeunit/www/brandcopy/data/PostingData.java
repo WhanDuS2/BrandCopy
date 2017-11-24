@@ -22,6 +22,69 @@ public class PostingData implements Serializable {
     private List<ReplyData> replyDataList;
 
 
+    public boolean isNotice() {
+        return isNotice;
+    }
+
+    public void setNotice(boolean notice) {
+        isNotice = notice;
+    }
+
+    public int getPostClassification() {
+        return postClassification;
+    }
+
+    public void setPostClassification(int postClassification) {
+        this.postClassification = postClassification;
+    }
+
+    public int getViews() {
+        return views;
+    }
+
+    public void setViews(int views) {
+        this.views = views;
+    }
+
+    public UserData getWriter() {
+        return writer;
+    }
+
+    public void setWriter(UserData writer) {
+        this.writer = writer;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getReply() {
+        return reply;
+    }
+
+    public void setReply(String reply) {
+        this.reply = reply;
+    }
+
+    public String getProfileURL() {
+        return profileURL;
+    }
+
+    public void setProfileURL(String profileURL) {
+        this.profileURL = profileURL;
+    }
+
+    public List<ReplyData> getReplyDataList() {
+        return replyDataList;
+    }
+
+    public void setReplyDataList(List<ReplyData> replyDataList) {
+        this.replyDataList = replyDataList;
+    }
 }
 
 

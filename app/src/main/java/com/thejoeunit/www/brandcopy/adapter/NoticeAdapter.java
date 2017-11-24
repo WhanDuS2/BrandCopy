@@ -14,17 +14,17 @@ import com.thejoeunit.www.brandcopy.data.PostingData;
 import java.util.List;
 
 /**
- * Created by the on 2017-11-21.
+ * Created by the on 2017-11-24.
  */
 
-public class InjuryInformationAdapter extends ArrayAdapter<PostingData> {
+public class NoticeAdapter extends ArrayAdapter<PostingData> {
 
     Context mContext;
     List<PostingData> mList;
     LayoutInflater inf;
 
-    public InjuryInformationAdapter(Context context, List<PostingData> list) {
-        super(context, R.layout.injury_info_list_item, list);
+    public NoticeAdapter(Context context, List<PostingData> list) {
+        super(context, R.layout.notice_list_item, list);
         mContext = context;
         mList = list;
         inf = LayoutInflater.from(mContext);
@@ -36,7 +36,7 @@ public class InjuryInformationAdapter extends ArrayAdapter<PostingData> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View row = convertView;
         if (row == null) {
-            row = inf.inflate(R.layout.injury_info_list_item, null);
+            row = inf.inflate(R.layout.notice_list_item, null);
         }
 
 //        Photo data = mList.get(position);

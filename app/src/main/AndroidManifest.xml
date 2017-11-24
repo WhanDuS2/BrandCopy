@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".SplashActivity" />
-        <activity android:name=".adapter.HomeMenuAdapter" />
         <activity android:name=".AnalysisActivity" />
         <activity android:name=".NoticeActivity" />
         <activity android:name=".TotalScoreActivity" />

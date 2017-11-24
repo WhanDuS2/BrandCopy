@@ -12,7 +12,7 @@ import java.util.List;
 public class AnalysisActivity extends BaseActivity {
 
     AnalysisAdapter mAdapter;
-    List<PostingData> photoLists = new ArrayList<>();
+    List<PostingData> writerUserList = new ArrayList<>();
     private android.widget.ListView analysisLisTView;
 
     @Override
@@ -33,7 +33,7 @@ public class AnalysisActivity extends BaseActivity {
 
     @Override
     public void setValues() {
-        mAdapter = new AnalysisAdapter(mContext, photoLists);
+        mAdapter = new AnalysisAdapter(mContext, writerUserList);
         analysisLisTView.setAdapter(mAdapter);
 
     }

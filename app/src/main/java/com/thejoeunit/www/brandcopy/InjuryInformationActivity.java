@@ -1,9 +1,21 @@
 package com.thejoeunit.www.brandcopy;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
+
+import com.thejoeunit.www.brandcopy.adapter.AnalysisAdapter;
+import com.thejoeunit.www.brandcopy.data.PostingData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class InjuryInformationActivity extends BaseActivity {
+
+    private android.widget.ListView injuryListView;
+
+    AnalysisAdapter mAdapter;
+    List<PostingData> writerUserList = new ArrayList<>();
+    private android.widget.ListView analysisLisTView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +30,13 @@ public class InjuryInformationActivity extends BaseActivity {
 
     @Override
     public void setValues() {
-
+        mAdapter = new AnalysisAdapter(mContext, writerUserList);
+        analysisLisTView.setAdapter(mAdapter);
     }
 
     @Override
     public void bindViews() {
+        this.injuryListView = (ListView) findViewById(R.id.injuryListView);
 
     }
 }

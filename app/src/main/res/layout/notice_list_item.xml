@@ -11,8 +11,8 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_marginLeft="5dp"
             android:padding="5dp"
             android:src="@mipmap/ic_launcher_round" />
@@ -25,57 +25,72 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="제목이 들어올 자리" />
 
             <LinearLayout
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="15dp"
-                    android:src="@drawable/time_icon"
-                    android:layout_height="15dp" />
+                    android:layout_height="15dp"
+                    android:src="@drawable/time_icon" />
 
                 <TextView
-                    android:layout_marginLeft="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="1"
                     android:text="작성시간" />
 
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
 
                 <ImageView
                     android:layout_width="15dp"
-                    android:src="@drawable/by_icon"
-                    android:layout_height="15dp" />
+                    android:layout_height="15dp"
+                    android:src="@drawable/by_icon" />
 
 
                 <TextView
-                    android:layout_marginLeft="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="1.01"
                     android:text="글쓴이" />
 
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+
                 <ImageView
                     android:layout_width="15dp"
-                    android:src="@drawable/view_icon"
-                    android:layout_height="15dp" />
-
+                    android:layout_height="15dp"
+                    android:src="@drawable/view_icon" />
 
 
                 <TextView
-                    android:layout_marginLeft="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="1"
                     android:text="조회수" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
 
 
             </LinearLayout>

@@ -39,6 +39,14 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        setIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, PushSettingActivity.class);
+                startActivity(intent);
+            }
+        });
+
         backIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

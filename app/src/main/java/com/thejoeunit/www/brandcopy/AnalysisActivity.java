@@ -1,6 +1,7 @@
 package com.thejoeunit.www.brandcopy;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.thejoeunit.www.brandcopy.adapter.AnalysisAdapter;
@@ -14,11 +15,16 @@ public class AnalysisActivity extends BaseActivity {
     AnalysisAdapter mAdapter;
     List<PostingData> writerUserList = new ArrayList<>();
     private android.widget.ListView analysisLisTView;
+    private android.widget.Button goWrtieBtn;
+    private Button wrtieBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analysis);
+
+        this.goWrtieBtn = (Button) findViewById(R.id.goWrtieBtn);
+        this.analysisLisTView = (ListView) findViewById(R.id.analysisLisTView);
 
         bindViews();
         setupEvents();

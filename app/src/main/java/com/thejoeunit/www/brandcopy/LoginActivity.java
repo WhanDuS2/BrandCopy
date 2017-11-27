@@ -29,6 +29,13 @@ public class LoginActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        nonMemberBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         signUpTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

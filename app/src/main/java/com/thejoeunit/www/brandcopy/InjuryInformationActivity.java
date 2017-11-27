@@ -46,8 +46,7 @@ public class InjuryInformationActivity extends BaseActivity {
         backIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
 
@@ -58,6 +57,7 @@ public class InjuryInformationActivity extends BaseActivity {
     public void setValues() {
         mAdapter = new AnalysisAdapter(mContext, writerUserList);
         injuryListView.setAdapter(mAdapter);
+
     }
 
     @Override

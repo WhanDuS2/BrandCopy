@@ -14,13 +14,41 @@
         android:gravity="center_vertical"
         android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
+            android:gravity="center_vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="회원가입"
-            android:textColor="#000000"
-            android:textSize="15sp" />
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backIMG"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/back_icon"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="회원가입"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
 
 
     </LinearLayout>
@@ -47,7 +75,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="15dp"
+            android:layout_height="17dp"
             android:layout_marginLeft="3dp"
             android:text="이메일 주소"
             android:textColor="#000000" />
@@ -65,7 +93,7 @@
             android:layout_height="25dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/sign_up_drawble"
             android:inputType="textEmailAddress"
             android:padding="5dp" />
@@ -88,7 +116,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="15dp"
+            android:layout_height="17dp"
             android:layout_marginLeft="3dp"
             android:text="비밀번호"
             android:textColor="#000000" />
@@ -107,7 +135,7 @@
             android:layout_height="25dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/sign_up_drawble"
             android:inputType="textPassword"
             android:padding="5dp" />
@@ -137,7 +165,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="15dp"
+            android:layout_height="17dp"
             android:layout_marginLeft="3dp"
             android:text="비밀번호 확인"
             android:textColor="#000000" />
@@ -156,7 +184,7 @@
             android:layout_height="25dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/sign_up_drawble"
             android:inputType="textPassword"
             android:padding="5dp" />
@@ -179,7 +207,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="15dp"
+            android:layout_height="17dp"
             android:layout_marginLeft="3dp"
             android:text="아이디"
             android:textColor="#000000" />
@@ -197,7 +225,7 @@
             android:layout_height="25dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/sign_up_drawble"
             android:padding="5dp" />
 
@@ -219,7 +247,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="15dp"
+            android:layout_height="17dp"
             android:layout_marginLeft="3dp"
             android:text="이름"
             android:textColor="#000000" />
@@ -237,7 +265,7 @@
             android:layout_height="25dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/sign_up_drawble"
             android:padding="5dp" />
 
@@ -260,7 +288,7 @@
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="15dp"
+            android:layout_height="17dp"
             android:layout_marginLeft="3dp"
             android:text="닉네임"
             android:textColor="#000000" />
@@ -280,7 +308,7 @@
             android:layout_height="25dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/sign_up_drawble"
             android:padding="5dp" />
 
@@ -302,7 +330,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="15dp"
+            android:layout_height="17dp"
             android:layout_marginLeft="3dp"
             android:text="비밀번호 찾기 질문/답변"
             android:textColor="#000000" />
@@ -311,18 +339,20 @@
 
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
+        <Spinner
+            android:padding="10dp"
+
+            android:id="@+id/pwHintSpinner"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="7dp"
-            android:background="@drawable/sign_up_drawble"
-            android:padding="5dp" />
+            android:layout_height="40dp"
+            android:entries="@array/pwHintSpinner"
+            android:spinnerMode="dialog"></Spinner>
+
 
 
     </LinearLayout>
@@ -333,6 +363,7 @@
         android:layout_height="0dp" />
 
         <Button
+            android:id="@+id/signUpBtn"
             android:layout_marginBottom="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

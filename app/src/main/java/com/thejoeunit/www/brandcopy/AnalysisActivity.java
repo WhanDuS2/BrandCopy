@@ -39,11 +39,18 @@ public class AnalysisActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        writeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, WritePostingActivity.class);
+                startActivity(intent);
+            }
+        });
+
         backIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
 

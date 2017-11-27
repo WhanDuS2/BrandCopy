@@ -33,8 +33,7 @@ public class GuideActivity extends BaseActivity {
         backIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
 

@@ -6,6 +6,16 @@
         <item >픽스터 이름</item>
 
     </string-array>
+
+    <string-array name="pwHintSpinner">
+        <item >선택</item>
+        <item >본인의 생일은?</item>
+        <item >부모님의 성함은?</item>
+        <item >자신의 보물 1호는?</item>
+        <item >가장 친한 친구의 연락처는?</item>
+        <item >없음</item>
+    </string-array>
+
 </resources>
 
 

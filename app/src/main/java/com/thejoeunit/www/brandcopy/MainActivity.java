@@ -43,6 +43,14 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        serviceCenterIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, WritePostingActivity.class);
+                startActivity(intent);
+            }
+        });
+
         offIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

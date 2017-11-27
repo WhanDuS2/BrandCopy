@@ -13,8 +13,8 @@
 
 
         <LinearLayout
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -48,10 +48,7 @@ dp
                     android:layout_weight="1"
                     android:text="작성날짜" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content" />
+
 
 
                 <ImageView
@@ -67,11 +64,6 @@ dp
                     android:layout_marginLeft="3dp"
                     android:layout_weight="1"
                     android:text="글쓴이" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content" />
 
 
                 <ImageView
@@ -89,10 +81,6 @@ dp
                     android:layout_weight="1"
                     android:text="댓글" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content" />
 
 
 
@@ -109,10 +97,7 @@ dp
                     android:layout_weight="1"
                     android:text="조회수" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content" />
+
 
 
             </LinearLayout>

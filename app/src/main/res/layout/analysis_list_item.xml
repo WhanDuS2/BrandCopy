@@ -5,16 +5,18 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginLeft="5dp"
-            android:padding="5dp"
+            android:padding="3dp"
             android:src="@mipmap/ic_launcher_round" />
 
 

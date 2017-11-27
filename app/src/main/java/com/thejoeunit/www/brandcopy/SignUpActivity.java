@@ -5,7 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SingUpActivity extends BaseActivity {
+public class SignUpActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

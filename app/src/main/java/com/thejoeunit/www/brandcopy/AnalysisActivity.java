@@ -2,7 +2,9 @@ package com.thejoeunit.www.brandcopy;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import com.thejoeunit.www.brandcopy.adapter.AnalysisAdapter;
 import com.thejoeunit.www.brandcopy.data.PostingData;
@@ -17,6 +19,9 @@ public class AnalysisActivity extends BaseActivity {
     private android.widget.ListView analysisLisTView;
     private android.widget.Button goWrtieBtn;
     private Button wrtieBtn;
+    private ListView analysisListView;
+    private android.widget.Spinner spinner;
+    private android.widget.EditText editText3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +50,9 @@ public class AnalysisActivity extends BaseActivity {
 
     @Override
     public void bindViews() {
-        this.analysisLisTView = (ListView) findViewById(R.id.analysisLisTView);
-        this.goWrtieBtn = (Button) findViewById(R.id.goWrtieBtn);
+        this.editText3 = (EditText) findViewById(R.id.editText3);
+        this.spinner = (Spinner) findViewById(R.id.spinner);
+        this.analysisListView = (ListView) findViewById(R.id.analysisListView);
 
 
     }

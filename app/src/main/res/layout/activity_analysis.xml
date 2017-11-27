@@ -5,46 +5,100 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.thejoeunit.www.brandcopy.AnalysisActivity">
+    tools:context="com.thejoeunit.www.brandcopy.DangerActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:src="@drawable/fm_logo" />
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-
-            <ListView
-                android:id="@+id/analysisLisTView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"></ListView>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="6"
+            android:src="@drawable/fm_logo" />
 
 
+        <Button
+            android:layout_marginRight="5dp"
+            android:id="@+id/writeBtn"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/write_activity_background"
+            android:text="쓰기" />
 
-            <Button
-                android:id="@+id/goWrtieBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/button_drawble"
-                android:gravity="center"
-                android:text="글쓰기" />
-
-
+    </LinearLayout>
 
 
-        </LinearLayout>
+    <ListView
+        android:id="@+id/analysisListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/write_activity_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:entries="@array/searchfillter"
+            android:spinnerMode="dialog"></Spinner>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="1dp"
+            android:background="#D4D4D4"
+            android:textStyle="bold" />
 
 
+        <EditText
+            android:id="@+id/contentEdt"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="3"
+            android:background="#00000000"
+            android:hint=""
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/searchTxt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/write_activity_background"
+            android:gravity="center"
+            android:text="검색"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 public class MainActivity extends BaseActivity {
 
     private android.widget.ImageView analysisIMG;
@@ -161,6 +163,16 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+
+        Glide.with(mContext).load(R.drawable.analysis_image).into(analysisIMG);
+        Glide.with(mContext).load(R.drawable.notice_icon).into(noticeIMG);
+        Glide.with(mContext).load(R.drawable.score_image).into(totalScoreIMG);
+        Glide.with(mContext).load(R.drawable.danger_icon).into(dangerIMG);
+        Glide.with(mContext).load(R.drawable.family_room_image).into(groupKakaoIMG);
+        Glide.with(mContext).load(R.drawable.injury_icon).into(injuryIMG);
+        Glide.with(mContext).load(R.drawable.gulie_icon).into(gulieIMG);
+        Glide.with(mContext).load(R.drawable.question_image).into(kakaoQuestionIMG);
+        Glide.with(mContext).load(R.drawable.service_center_icon).into(serviceCenterIMG);
 
     }
 

@@ -3,35 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.thejoeunit.www.brandcopy.DangerActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="70dp">
+        android:layout_height="70dp"
+        android:orientation="horizontal">
 
         <ImageView
-            android:layout_gravity="center"
+            android:id="@+id/backIMG"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/back_icon"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="20dp" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
 
         <ImageView
             android:layout_width="0dp"
+            android:layout_height="70dp"
             android:layout_weight="6"
-            android:src="@drawable/fm_logo"
-            android:layout_height="70dp" />
+            android:src="@drawable/fm_logo" />
 
-        <ImageView
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:src="@drawable/wrtie_icon"
-            android:layout_height="40dp" />
 
+        <Button
+            android:layout_marginRight="5dp"
+            android:id="@+id/writeBtn"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/write_activity_background"
+            android:text="쓰기" />
 
     </LinearLayout>
 
@@ -43,13 +52,12 @@
         android:layout_weight="1"></ListView>
 
     <LinearLayout
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/write_activity_background"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="5dp">
+        android:padding="3dp">
 
         <Spinner
             android:id="@+id/spinner"
@@ -69,7 +77,7 @@
 
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/contentEdt"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="3"
@@ -81,6 +89,7 @@
 
 
         <TextView
+            android:id="@+id/searchTxt"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -95,6 +104,3 @@
 
 
 </LinearLayout>
-
-
-

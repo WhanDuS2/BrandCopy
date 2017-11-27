@@ -17,15 +17,47 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_margin="10dp"
-                android:background="#FAE100"
-                android:gravity="center"
-                android:text="이용자 가이드(승무패,핸디,언오버)"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/backIMG"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/back_icon"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="#FAE100"
+                    android:gravity="center"
+                    android:text="이용자 가이드(승무패,핸디,언오버)"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content" />
+
+
+
+
+            </LinearLayout>
+
 
             <ImageView
                 android:id="@+id/userGuliePhotoOne"

@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.github.chrisbanes.photoview.PhotoView;
 import com.thejoeunit.www.brandcopy.usergulie_activity.UserGulieActivityOne;
 import com.thejoeunit.www.brandcopy.usergulie_activity.UserGulieActivityThree;
 import com.thejoeunit.www.brandcopy.usergulie_activity.UserGulieActivityTwo;
@@ -16,7 +15,7 @@ public class GuideActivity extends BaseActivity {
     private android.widget.ImageView userGuliePhotoOne;
     private android.widget.ImageView userGuliePhotoTwo;
     private android.widget.ImageView userGuliePhotoThree;
-    private com.github.chrisbanes.photoview.PhotoView kakaofamilyIMG;
+    private ImageView backIMG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +29,15 @@ public class GuideActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+
+        backIMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         userGuliePhotoOne.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +80,6 @@ public class GuideActivity extends BaseActivity {
         this.userGuliePhotoThree = (ImageView) findViewById(R.id.userGuliePhotoThree);
         this.userGuliePhotoTwo = (ImageView) findViewById(R.id.userGuliePhotoTwo);
         this.userGuliePhotoOne = (ImageView) findViewById(R.id.userGuliePhotoOne);
-
+        this.backIMG = (ImageView) findViewById(R.id.backIMG);
     }
 }

@@ -13,10 +13,12 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:layout_weight="1" />
+            android:id="@+id/backIMG"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/back_icon"
+            android:layout_marginLeft="10dp" />
 
         <TextView
             android:layout_width="0dp"
@@ -32,11 +34,11 @@
 
 
         <Button
-            android:layout_marginRight="5dp"
             android:id="@+id/writeBtn"
             android:layout_width="70dp"
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
             android:background="@drawable/write_activity_background"
             android:text="쓰기" />
 

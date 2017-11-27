@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.thejoeunit.www.brandcopy.usergulie_activity.UserGulieActivityOne;
 import com.thejoeunit.www.brandcopy.usergulie_activity.UserGulieActivityThree;
@@ -59,6 +60,10 @@ public class GuideActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+
+        Glide.with(mContext).load(R.drawable.usergulie_one).into(userGuliePhotoOne);
+        Glide.with(mContext).load(R.drawable.usergulie_two).into(userGuliePhotoTwo);
+        Glide.with(mContext).load(R.drawable.usergulie_three).into(userGuliePhotoThree);
 
     }
 

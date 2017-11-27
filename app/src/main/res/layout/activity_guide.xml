@@ -30,22 +30,19 @@
             <ImageView
                 android:id="@+id/userGuliePhotoOne"
                 android:layout_width="match_parent"
-                android:layout_height="290dp"
-                android:src="@drawable/usergulie_one" />
+                android:layout_height="290dp" />
 
             <ImageView
                 android:id="@+id/userGuliePhotoTwo"
                 android:layout_width="match_parent"
                 android:layout_height="310dp"
-                android:layout_marginTop="2dp"
-                android:src="@drawable/usergulie_two" />
+                android:layout_marginTop="2dp" />
 
             <ImageView
                 android:id="@+id/userGuliePhotoThree"
                 android:layout_width="match_parent"
                 android:layout_height="435dp"
-                android:layout_marginTop="2dp"
-                android:src="@drawable/usergulie_three" />
+                android:layout_marginTop="2dp" />
 
 
         </LinearLayout>

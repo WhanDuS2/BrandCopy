@@ -42,6 +42,15 @@ public class ServiceCenterActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        writeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, UserWritePostingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         backIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

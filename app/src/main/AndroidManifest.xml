@@ -34,7 +34,8 @@
         <activity android:name=".usergulie_activity.UserGulieActivityTwo" />
         <activity android:name=".usergulie_activity.UserGulieActivityThree" />
         <activity android:name=".PushSettingActivity" />
-        <activity android:name=".ForgetIdActivity"></activity>
+        <activity android:name=".ForgetIdActivity" />
+        <activity android:name=".UserWritePostingActivity"></activity>
     </application>
 
 </manifest>

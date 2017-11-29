@@ -20,14 +20,13 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/back_icon"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/back_icon" />
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
 
         <TextView
@@ -43,9 +42,8 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1.5"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5" />
 
 
     </LinearLayout>
@@ -117,9 +115,9 @@
     </LinearLayout>
 
     <LinearLayout
-        android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <ImageView
@@ -135,51 +133,52 @@
             android:textColor="#000000"
             android:textSize="18sp" />
 
-   <EditText
-       android:gravity="center"
-       android:inputType="textPassword"
-       android:layout_width="match_parent"
-       android:hint="비밀번호 입력"
-       android:background="#00000000"
-       android:layout_height="match_parent" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:gravity="center"
+            android:hint="비밀번호 입력"
+            android:inputType="textPassword" />
 
 
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
 
         <Button
-            android:layout_margin="5dp"
+            android:id="@+id/enterBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:background="@drawable/write_activity_background"
             android:text="등록" />
 
         <Button
-            android:layout_margin="5dp"
+            android:id="@+id/cancelBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:background="@drawable/write_activity_background"
             android:text="취소" />
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
 
     </LinearLayout>

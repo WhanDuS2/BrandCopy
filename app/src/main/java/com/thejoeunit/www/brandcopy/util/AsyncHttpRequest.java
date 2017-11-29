@@ -1,4 +1,4 @@
-package com.thejoeunit.www.brandcopy.serverutil;
+package com.thejoeunit.www.brandcopy.util;
 
 
 import android.app.ProgressDialog;
@@ -9,13 +9,9 @@ import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
-import android.widget.Toast;
-
-import org.json.JSONObject;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.net.InetAddress;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;

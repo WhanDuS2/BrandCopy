@@ -1,4 +1,4 @@
-package com.thejoeunit.www.brandcopy.serverutil;
+package com.thejoeunit.www.brandcopy.util;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

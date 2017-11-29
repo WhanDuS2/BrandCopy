@@ -1,5 +1,8 @@
 package com.thejoeunit.www.brandcopy.data;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.Serializable;
 
 /**
@@ -11,8 +14,27 @@ public class UserData implements Serializable {
     private String email;
     private String nickName;
     private int userId;
-    private String password;
     private boolean isManager; // 매니저모드인지 아닌지,
+
+    public static UserData getUserFromJsonObject(JSONObject json) {
+//        매번 파싱하기 매우 귀찮다.
+        UserData tempUser = new UserData();
+//        json을 파싱해서, tempUser의 내용물로 채워주기.
+        try {
+            tempUser.userId(json.getInt("id"));
+            tempUser.setNickName(json.getString("user_id"));
+            tempUser.setNickName(json.getString("name"));
+            tempUser.setProfileURL("http://13.124.238.13" + json.getJSONObject("profile_photo").getString("url"));
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        return tempUser;
+
+    }
+
 
     public String getEmail() {
         return email;
@@ -36,14 +58,6 @@ public class UserData implements Serializable {
 
     public void setUserId(int userId) {
         this.userId = userId;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public boolean isManager() {

@@ -19,7 +19,7 @@ import java.util.Map;
 public class ServerUtil {
 
     private static final String TAG = ServerUtil.class.getSimpleName();
-    private final static String BASE_URL = "http://13.124.238.13/"; // 라이브서버
+    private final static String BASE_URL = "http://192.168.20.7/"; // 라이브서버
 //    private final static String BASE_URL = "http://share-tdd.com/"; // 개발서버
 
     public interface JsonResponseHandler {

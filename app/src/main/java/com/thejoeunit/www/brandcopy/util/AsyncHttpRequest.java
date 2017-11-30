@@ -16,7 +16,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
-import kr.kjstudio.share_tdd.R;
 
 
 public class AsyncHttpRequest {

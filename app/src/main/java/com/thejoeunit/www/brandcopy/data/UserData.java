@@ -18,20 +18,19 @@ public class UserData implements Serializable {
 
     public static UserData getUserFromJsonObject(JSONObject json) {
 //        매번 파싱하기 매우 귀찮다.
-        UserData tempUser = new UserData();
+        UserData user = new UserData();
 //        json을 파싱해서, tempUser의 내용물로 채워주기.
         try {
-            tempUser.userId(json.getInt("id"));
-            tempUser.setNickName(json.getString("user_id"));
-            tempUser.setNickName(json.getString("name"));
-            tempUser.setProfileURL("http://13.124.238.13" + json.getJSONObject("profile_photo").getString("url"));
+            user.setUserId(json.getInt("id"));
+            user.setNickName(json.getString("nickname"));
+                user.setEmail(json.getString("e_mail"));
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
 
-        return tempUser;
+        return user;
 
     }
 

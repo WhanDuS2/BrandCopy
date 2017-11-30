@@ -10,6 +10,8 @@ import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 
+import com.thejoeunit.www.brandcopy.R;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.text.SimpleDateFormat;
@@ -47,9 +49,9 @@ public class AsyncHttpRequest {
             new AsyncHttpRequestTask(context, async, showProgress, handler).execute();
         } else {
             AlertDialog.Builder alert = new AlertDialog.Builder(context);
-            alert.setTitle(R.string.connection_error);
-            alert.setMessage(R.string.connection_error_request);
-            alert.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            alert.setTitle("연결 실패");
+            alert.setMessage("연결 상태를 확인해주세요.");
+            alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     System.exit(0);

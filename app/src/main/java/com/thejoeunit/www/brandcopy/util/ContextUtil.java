@@ -23,7 +23,6 @@ public class ContextUtil {
 //    1. 사용자 숫자 ID
 //    2. 사용자 폰번
 
-    private static final String ID = "ID";
     private static final String USER_ID = "USER_ID";
     private static final String USER_NICK_NAME = "USER_NICK_NAME";
     private static final String USER_E_MAIL = "USER_E_MAIL";
@@ -32,8 +31,7 @@ public class ContextUtil {
     public static void logout(Context context) {
         SharedPreferences pref = context.getSharedPreferences(prefName, Context.MODE_PRIVATE);
 
-        pref.edit().putInt(ID, 0).commit();
-        pref.edit().putString(USER_ID, "").commit();
+        pref.edit().putInt(USER_ID, 0).commit();
         pref.edit().putString(USER_NICK_NAME, "").commit();
         pref.edit().putString(USER_E_MAIL, "").commit();
 
@@ -42,7 +40,7 @@ public class ContextUtil {
     public static void login(Context context, UserData loginUser) {
         SharedPreferences pref = context.getSharedPreferences(prefName, Context.MODE_PRIVATE);
 
-        pref.edit().putInt(ID, loginUser.getUserId()).commit();
+        pref.edit().putInt(USER_ID, loginUser.getUserId()).commit();
         pref.edit().putString(USER_NICK_NAME, loginUser.getNickName()).commit();
         pref.edit().putString(USER_E_MAIL, loginUser.getEmail()).commit();
 
@@ -58,7 +56,7 @@ public class ContextUtil {
         }
         else {
             loginUser = new UserData();
-            loginUser.setUserId(pref.getInt(ID, 0));
+            loginUser.setUserId(pref.getInt(USER_ID, 0));
             loginUser.setNickName(pref.getString(USER_NICK_NAME, ""));
 
         }

@@ -8,8 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.thejoeunit.www.brandcopy.util.ServerUtil;
+
+import org.json.JSONObject;
 
 public class MainActivity extends BaseActivity {
 
@@ -172,6 +176,13 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+
+        ServerUtil.getAllusers(mContext, new ServerUtil.JsonResponseHandler() {
+            @Override
+            public void onResponse(JSONObject json) {
+                Toast.makeText(mContext, json.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         Glide.with(mContext).load(R.drawable.analysis_image).into(analysisIMG);
         Glide.with(mContext).load(R.drawable.notice_icon).into(noticeIMG);

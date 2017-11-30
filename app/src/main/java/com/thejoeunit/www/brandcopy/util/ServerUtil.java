@@ -19,7 +19,7 @@ import java.util.Map;
 public class ServerUtil {
 
     private static final String TAG = ServerUtil.class.getSimpleName();
-    private final static String BASE_URL = "http://192.168.20.7/"; // 라이브서버
+    private final static String BASE_URL = "http://192.168.20.7:8080/"; // 라이브서버
 //    private final static String BASE_URL = "http://share-tdd.com/"; // 개발서버
 
     public interface JsonResponseHandler {
@@ -124,7 +124,7 @@ public class ServerUtil {
 
     // 로그인 기능
     public static void sign_in(final Context context, String pw, String email, final JsonResponseHandler handler) {
-        String url = BASE_URL + "mobile/sign_in";
+        String url = BASE_URL + "fmpic/sign_in";
 //        		String registrationId = ContextUtil.getRegistrationId(context);
 
         Map<String, String> data = new HashMap<String, String>();
@@ -163,6 +163,48 @@ public class ServerUtil {
 
         });
     }
+
+
+    // 테스트용 모든 사용자 가져오기
+    public static void getAllusers(final Context context, final JsonResponseHandler handler) {
+        String url = BASE_URL + "fmpic/getAllusers";
+//        		String registrationId = ContextUtil.getRegistrationId(context);
+
+        Map<String, String> data = new HashMap<String, String>();
+
+        AsyncHttpRequest.post(context, url, data, true, new AsyncHttpRequest.HttpResponseHandler() {
+
+            @Override
+            public boolean onPrepare() {
+                return true;
+            }
+
+            @Override
+            public void onResponse(String response) {
+                System.out.println(response);
+                try {
+                    JSONObject json = new JSONObject(response);
+
+                    if (handler != null)
+                        handler.onResponse(json);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+
+            @Override
+            public void onCancelled() {
+
+            }
+
+        });
+    }
+
 
 
 }

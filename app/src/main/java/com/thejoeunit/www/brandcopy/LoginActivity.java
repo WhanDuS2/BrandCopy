@@ -13,6 +13,7 @@ import com.thejoeunit.www.brandcopy.data.UserData;
 import com.thejoeunit.www.brandcopy.util.ContextUtil;
 import com.thejoeunit.www.brandcopy.util.ServerUtil;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -61,15 +62,18 @@ public class LoginActivity extends BaseActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ServerUtil.sign_in(mContext,
+                ServerUtil.get_sign_in(mContext,
                         emailEdt.getText().toString(),
                         pwEdt.getText().toString(),
                         new ServerUtil.JsonResponseHandler() {
                             @Override
                             public void onResponse(JSONObject json) {
                                 try {
-                                    if (json.getBoolean("result")) {
-                                        UserData temp = UserData.getUserFromJsonObject(json.getJSONObject("user"));
+                                    JSONArray users = json.getJSONArray("users");
+
+
+                                    if (users.length() > 0) {
+                                        UserData temp = UserData.getUserFromJsonObject(users.getJSONObject(0));
 
 
                                         Log.d("이메일주소", temp.getEmail());
@@ -86,6 +90,9 @@ public class LoginActivity extends BaseActivity {
                                         finish();
 
 
+                                    }
+                                    else {
+                                        Toast.makeText(mContext, "로그인에 실패했습니다.", Toast.LENGTH_SHORT).show();
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();

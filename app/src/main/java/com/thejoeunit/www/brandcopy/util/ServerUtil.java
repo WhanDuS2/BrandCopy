@@ -38,6 +38,7 @@ public class ServerUtil {
         Map<String, String> data = new HashMap<String, String>();
         data.put("user_id", id);
 
+
         AsyncHttpRequest.post(context, url, data, false, new AsyncHttpRequest.HttpResponseHandler() {
 
             @Override
@@ -71,22 +72,15 @@ public class ServerUtil {
         });
     }
 
-    // 회원 가입 기능
-    public static void sign_up(final Context context, final String id,
-                               final String pw,
-                               final String name,
-                               final String profilePhoto,
-                               final String phoneNum,
-                               final JsonResponseHandler handler) {
-        String url = BASE_URL + "mobile/sign_up";
-        //		String registrationId = ContextUtil.getRegistrationId(context);
+    // 회원가입 기능
+    public static void insert_new_user(final Context context, String nickname, String e_mail, String password, final JsonResponseHandler handler) {
+        String url = BASE_URL + "fmpic/insert_new_user";
+//        		String registrationId = ContextUtil.getRegistrationId(context);
 
         Map<String, String> data = new HashMap<String, String>();
-        data.put("user_id", id);
-        data.put("password", pw);
-        data.put("name", name);
-        data.put("profile_photo", profilePhoto);
-        data.put("phone_num", phoneNum);
+        data.put("user_nickname", nickname);
+        data.put("user_e_mail", e_mail);
+        data.put("password", password);
 
         AsyncHttpRequest.post(context, url, data, true, new AsyncHttpRequest.HttpResponseHandler() {
 
@@ -122,9 +116,10 @@ public class ServerUtil {
     }
 
 
+
     // 로그인 기능
-    public static void sign_in(final Context context, String pw, String email, final JsonResponseHandler handler) {
-        String url = BASE_URL + "fmpic/sign_in";
+    public static void get_sign_in(final Context context, String email, String pw, final JsonResponseHandler handler) {
+        String url = BASE_URL + "fmpic/get_sign_in";
 //        		String registrationId = ContextUtil.getRegistrationId(context);
 
         Map<String, String> data = new HashMap<String, String>();

@@ -177,13 +177,6 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setValues() {
 
-        ServerUtil.getAllusers(mContext, new ServerUtil.JsonResponseHandler() {
-            @Override
-            public void onResponse(JSONObject json) {
-                Toast.makeText(mContext, json.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
         Glide.with(mContext).load(R.drawable.analysis_image).into(analysisIMG);
         Glide.with(mContext).load(R.drawable.notice_icon).into(noticeIMG);
         Glide.with(mContext).load(R.drawable.score_image).into(totalScoreIMG);

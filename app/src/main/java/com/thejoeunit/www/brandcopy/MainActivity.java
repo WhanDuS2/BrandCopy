@@ -35,6 +35,8 @@ public class MainActivity extends BaseActivity {
     private android.widget.TextView textView2;
     private ImageView injuryIMG;
 
+//    TODO 리스트뷰 데이터삽입 , 푸쉬 설정 ,
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,15 +62,15 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder offNotice = new AlertDialog.Builder(MainActivity.this);
-                offNotice.setTitle ( " 종료 " );
-                offNotice.setMessage ( " 앱을 종료하시겠습니까? " );
+                offNotice.setTitle(" 종료 ");
+                offNotice.setMessage(" 앱을 종료하시겠습니까? ");
                 offNotice.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         finish();
                     }
                 });
-                offNotice.setNegativeButton ( "취소", null );
+                offNotice.setNegativeButton("취소", null);
 
                 offNotice.show();
 
@@ -166,7 +168,7 @@ public class MainActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.livescroe.co.kr/"));
+                intent.setData(Uri.parse("https://www.flashscore.com/"));
                 startActivity(intent);
             }
         });
@@ -177,15 +179,15 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setValues() {
 
-        Glide.with(mContext).load(R.drawable.analysis_image).into(analysisIMG);
-        Glide.with(mContext).load(R.drawable.notice_icon).into(noticeIMG);
-        Glide.with(mContext).load(R.drawable.score_image).into(totalScoreIMG);
-        Glide.with(mContext).load(R.drawable.danger_icon).into(dangerIMG);
-        Glide.with(mContext).load(R.drawable.family_room_image).into(groupKakaoIMG);
-        Glide.with(mContext).load(R.drawable.injury_icon).into(injuryIMG);
-        Glide.with(mContext).load(R.drawable.gulie_icon).into(gulieIMG);
-        Glide.with(mContext).load(R.drawable.question_image).into(kakaoQuestionIMG);
-        Glide.with(mContext).load(R.drawable.service_center_icon).into(serviceCenterIMG);
+        Glide.with(mContext).load(R.drawable.analysis_icon).into(analysisIMG);
+        Glide.with(mContext).load(R.drawable.notice_iconn).into(noticeIMG);
+        Glide.with(mContext).load(R.drawable.score_icon).into(totalScoreIMG);
+        Glide.with(mContext).load(R.drawable.danger_iconn).into(dangerIMG);
+        Glide.with(mContext).load(R.drawable.family_icon).into(groupKakaoIMG);
+        Glide.with(mContext).load(R.drawable.injury_iconn).into(injuryIMG);
+        Glide.with(mContext).load(R.drawable.guliedance_cion).into(gulieIMG);
+        Glide.with(mContext).load(R.drawable.question_icon).into(kakaoQuestionIMG);
+        Glide.with(mContext).load(R.drawable.service_icon).into(serviceCenterIMG);
 
     }
 

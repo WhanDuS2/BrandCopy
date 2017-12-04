@@ -27,19 +27,21 @@ public class ServerUtil {
     }
 
 
-    // 사용자 관련 함수 모음
-
-
-    // 회원 가입시 아이디 중복 체크
-    public static void check_dupl_id(final Context context, final String id, final JsonResponseHandler handler) {
-        String url = BASE_URL + "mobile/check_dupl_id";
-        //		String registrationId = ContextUtil.getRegistrationId(context);
+    //  관리자 게시물 기능
+    public static void insert_new_post(final Context context, int userId, int postClassification, int views, String content,
+                                       String profileURL, String title final JsonResponseHandler handler) {
+        String url = BASE_URL + "fmpic/insert_new_post";
+//        		String registrationId = ContextUtil.getRegistrationId(context);
 
         Map<String, String> data = new HashMap<String, String>();
-        data.put("user_id", id);
+        data.put("user_id", "");
+        data.put("postClassification", "");
+        data.put("views", "");
+        data.put("content", "content");
+        data.put("profileURL", "profileURL");
+        data.put("title", "title");
 
-
-        AsyncHttpRequest.post(context, url, data, false, new AsyncHttpRequest.HttpResponseHandler() {
+        AsyncHttpRequest.post(context, url, data, true, new AsyncHttpRequest.HttpResponseHandler() {
 
             @Override
             public boolean onPrepare() {
@@ -71,6 +73,7 @@ public class ServerUtil {
 
         });
     }
+
 
     // 회원가입 기능
     public static void insert_new_user(final Context context, String nickname, String e_mail, String password, final JsonResponseHandler handler) {
@@ -114,7 +117,6 @@ public class ServerUtil {
 
         });
     }
-
 
 
     // 로그인 기능
@@ -199,7 +201,6 @@ public class ServerUtil {
 
         });
     }
-
 
 
 }

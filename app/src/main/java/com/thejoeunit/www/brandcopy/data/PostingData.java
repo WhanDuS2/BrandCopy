@@ -15,7 +15,6 @@ public class PostingData implements Serializable {
 
     private int postClassification; // 게시판 분류 변수
     private int views; // 조회수
-    private UserData writer; // 쓴사람
     private String content; // 글의 내용
     private String reply; // 글의 리플
     private String profileURL; // 이미지 경로
@@ -23,8 +22,21 @@ public class PostingData implements Serializable {
 
     private List<ReplyData> replyDataList;
 
+    public PostingData() {
+    }
 
-            public boolean isNotice() {
+    public PostingData(boolean isNotice, int postClassification, int views, String content, String reply, String profileURL, String title, List<ReplyData> replyDataList) {
+        this.isNotice = isNotice;
+        this.postClassification = postClassification;
+        this.views = views;
+        this.content = content;
+        this.reply = reply;
+        this.profileURL = profileURL;
+        this.title = title;
+        this.replyDataList = replyDataList;
+    }
+
+    public boolean isNotice() {
         return isNotice;
     }
 
@@ -46,14 +58,6 @@ public class PostingData implements Serializable {
 
     public void setViews(int views) {
         this.views = views;
-    }
-
-    public UserData getWriter() {
-        return writer;
-    }
-
-    public void setWriter(UserData writer) {
-        this.writer = writer;
     }
 
     public String getContent() {
@@ -78,6 +82,14 @@ public class PostingData implements Serializable {
 
     public void setProfileURL(String profileURL) {
         this.profileURL = profileURL;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public List<ReplyData> getReplyDataList() {

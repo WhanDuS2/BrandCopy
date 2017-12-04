@@ -7,6 +7,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.thejoeunit.www.brandcopy.util.ContextUtil;
+import com.thejoeunit.www.brandcopy.util.ServerUtil;
+
 public class WritePostingActivity extends BaseActivity {
 
     private android.widget.ImageView backIMG;
@@ -41,6 +44,7 @@ public class WritePostingActivity extends BaseActivity {
         enterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                ServerUtil.insert_new_post(mContext, ContextUtil.getLoginUser(mContext).getUserId(), 1);
 
             }
         });

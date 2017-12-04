@@ -29,17 +29,17 @@ public class ServerUtil {
 
     //  관리자 게시물 기능
     public static void insert_new_post(final Context context, int userId, int postClassification, int views, String content,
-                                       String profileURL, String title final JsonResponseHandler handler) {
+                                       String profileURL, String title, final JsonResponseHandler handler) {
         String url = BASE_URL + "fmpic/insert_new_post";
 //        		String registrationId = ContextUtil.getRegistrationId(context);
 
         Map<String, String> data = new HashMap<String, String>();
-        data.put("user_id", "");
-        data.put("postClassification", "");
-        data.put("views", "");
-        data.put("content", "content");
-        data.put("profileURL", "profileURL");
-        data.put("title", "title");
+        data.put("user_id", userId + "");
+        data.put("postClassification", postClassification + "");
+        data.put("views", views + "");
+        data.put("content", content);
+        data.put("profileURL", profileURL);
+        data.put("title", title);
 
         AsyncHttpRequest.post(context, url, data, true, new AsyncHttpRequest.HttpResponseHandler() {
 

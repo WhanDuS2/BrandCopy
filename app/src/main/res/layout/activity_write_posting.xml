@@ -20,14 +20,13 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/back_icon"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/back_icon" />
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
 
         <TextView
@@ -43,9 +42,8 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1.5"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5" />
 
 
     </LinearLayout>
@@ -153,25 +151,28 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_margin="5dp"
+            android:id="@+id/upLoadFileBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:background="@drawable/write_activity_background"
             android:text="이미지 첨부" />
 
         <Button
-            android:layout_margin="5dp"
+            android:id="@+id/enterBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:background="@drawable/write_activity_background"
             android:text="등록" />
 
         <Button
-            android:layout_margin="5dp"
+            android:id="@+id/cancelBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:background="@drawable/write_activity_background"
             android:text="취소" />

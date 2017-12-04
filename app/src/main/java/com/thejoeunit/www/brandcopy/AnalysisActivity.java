@@ -39,13 +39,6 @@ public class AnalysisActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
-        writeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mContext, WritePostingActivity.class);
-                startActivity(intent);
-            }
-        });
 
         backIMG.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,10 +47,18 @@ public class AnalysisActivity extends BaseActivity {
             }
         });
 
+        writeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, WritePostingActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
-    @Override
+
     public void setValues() {
         mAdapter = new AnalysisAdapter(mContext, writerUserList);
         analysisListView.setAdapter(mAdapter);

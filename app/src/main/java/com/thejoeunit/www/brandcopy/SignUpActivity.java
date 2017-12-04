@@ -35,11 +35,10 @@ public class SignUpActivity extends BaseActivity {
             public void onClick(View view) {
 
 
-                    Toast.makeText(mContext, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(mContext, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-
+                Toast.makeText(mContext, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext, MainActivity.class);
+                startActivity(intent);
+                finish();
 
 
             }

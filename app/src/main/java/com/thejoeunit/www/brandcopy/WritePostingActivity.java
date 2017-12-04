@@ -5,10 +5,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.thejoeunit.www.brandcopy.util.ContextUtil;
 import com.thejoeunit.www.brandcopy.util.ServerUtil;
+
+import org.json.JSONObject;
 
 public class WritePostingActivity extends BaseActivity {
 
@@ -19,6 +23,9 @@ public class WritePostingActivity extends BaseActivity {
     private android.widget.Button upLoadFileBtn;
     private android.widget.Button enterBtn;
     private android.widget.Button cancelBtn;
+    private android.widget.Spinner postClassificationSpinner;
+    private EditText contentEdt;
+    private EditText titleEdt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +51,13 @@ public class WritePostingActivity extends BaseActivity {
         enterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                ServerUtil.insert_new_post(mContext, ContextUtil.getLoginUser(mContext).getUserId(), 1);
+                ServerUtil.insert_new_post(mContext, ContextUtil.getLoginUser(mContext).getUserId(), postClassificationSpinner.getSelectedItemPosition(), 0, contentEdt.getText().toString(), "", titleEdt.getText().toString(),
+                        new ServerUtil.JsonResponseHandler() {
+                            @Override
+                            public void onResponse(JSONObject json) {
+                                Toast.makeText(mContext, "게시글이 등록되었습니다.", Toast.LENGTH_SHORT).show();
+                            }
+                        });
 
             }
         });
@@ -61,7 +74,9 @@ public class WritePostingActivity extends BaseActivity {
         this.enterBtn = (Button) findViewById(R.id.enterBtn);
         this.upLoadFileBtn = (Button) findViewById(R.id.upLoadFileBtn);
         this.imageView = (ImageView) findViewById(R.id.imageView);
-        this.editText = (EditText) findViewById(R.id.editText);
+        this.contentEdt = (EditText) findViewById(R.id.contentEdt);
+        this.titleEdt = (EditText) findViewById(R.id.titleEdt);
+        this.postClassificationSpinner = (Spinner) findViewById(R.id.postClassificationSpinner);
         this.titleTxt = (TextView) findViewById(R.id.titleTxt);
         this.backIMG = (ImageView) findViewById(R.id.backIMG);
 

@@ -88,6 +88,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/emailAddressEdt"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginLeft="5dp"
@@ -96,6 +97,15 @@
             android:background="@drawable/sign_up_drawble"
             android:inputType="textEmailAddress"
             android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/checkEmailTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="중복된 아이디입니다."
+            android:textSize="11sp" />
+
 
 
     </LinearLayout>
@@ -189,6 +199,14 @@
             android:inputType="textPassword"
             android:padding="5dp" />
 
+        <TextView
+            android:id="@+id/checkPwTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="비밀번호가 일치하지않습니다."
+            android:textSize="11sp" />
+
 
     </LinearLayout>
 
@@ -235,13 +253,13 @@
     </LinearLayout>
 
     <LinearLayout
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="2dp"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="15dp"
@@ -264,15 +282,14 @@
         android:orientation="vertical">
 
         <EditText
-            android:visibility="gone"
-            android:id="@+id/editText2"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/sign_up_drawble"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:visibility="gone" />
 
 
     </LinearLayout>
@@ -291,7 +308,6 @@
             android:src="@drawable/red_star" />
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="17dp"
             android:layout_marginLeft="3dp"
@@ -308,6 +324,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/nickNameEdt"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginLeft="5dp"

@@ -38,7 +38,9 @@
         <activity android:name=".usergulie_activity.UserGulieActivityThree" />
         <activity android:name=".PushSettingActivity" />
         <activity android:name=".ForgetIdActivity" />
-        <activity android:name=".UserWritePostingActivity"></activity>
+        <activity android:name=".UserWritePostingActivity" />
+        <activity android:name=".ImageViewPagerActivity" />
+        <activity android:name=".UserPostingActivity"></activity>
     </application>
 
 </manifest>

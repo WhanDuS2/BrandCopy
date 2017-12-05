@@ -3,6 +3,7 @@ package com.thejoeunit.www.brandcopy;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -26,6 +27,7 @@ public class WritePostingActivity extends BaseActivity {
     private android.widget.Spinner postClassificationSpinner;
     private EditText contentEdt;
     private EditText titleEdt;
+    private android.widget.CheckBox isNoticeCheckBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +53,15 @@ public class WritePostingActivity extends BaseActivity {
         enterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ServerUtil.insert_new_post(mContext, ContextUtil.getLoginUser(mContext).getUserId(), postClassificationSpinner.getSelectedItemPosition(), 0, contentEdt.getText().toString(), "", titleEdt.getText().toString(),
+                String notice = "";
+
+                if (isNoticeCheckBox.isChecked()) {
+                    notice = "1";
+                } else {
+                    notice = "0";
+                }
+
+                ServerUtil.get_new_post(mContext, ContextUtil.getLoginUser(mContext).getUserId(), postClassificationSpinner.getSelectedItemPosition(), 0, contentEdt.getText().toString(), "", titleEdt.getText().toString(), notice,
                         new ServerUtil.JsonResponseHandler() {
                             @Override
                             public void onResponse(JSONObject json) {
@@ -73,6 +83,7 @@ public class WritePostingActivity extends BaseActivity {
         this.cancelBtn = (Button) findViewById(R.id.cancelBtn);
         this.enterBtn = (Button) findViewById(R.id.enterBtn);
         this.upLoadFileBtn = (Button) findViewById(R.id.upLoadFileBtn);
+        this.isNoticeCheckBox = (CheckBox) findViewById(R.id.isNoticeCheckBox);
         this.imageView = (ImageView) findViewById(R.id.imageView);
         this.contentEdt = (EditText) findViewById(R.id.contentEdt);
         this.titleEdt = (EditText) findViewById(R.id.titleEdt);

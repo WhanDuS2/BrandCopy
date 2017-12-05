@@ -127,6 +127,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:gravity="center_vertical"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
@@ -152,6 +153,17 @@
             android:layout_height="70dp"
             android:src="@drawable/by_icon" />
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:layout_marginRight="10dp"
+            android:id="@+id/isNoticeCheckBox"
+            android:layout_width="wrap_content"
+            android:text="공지사항"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

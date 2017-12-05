@@ -50,7 +50,7 @@ public class ContextUtil {
     public static UserData getLoginUser(Context context) {
         SharedPreferences pref = context.getSharedPreferences(prefName, Context.MODE_PRIVATE);
 
-        if (pref.getString(USER_ID, "").equals("")) {
+        if (pref.getInt(USER_ID, 0 ) == 0 ) {
 //            로그인이 안된 상태
             loginUser = null;
         }
@@ -58,6 +58,7 @@ public class ContextUtil {
             loginUser = new UserData();
             loginUser.setUserId(pref.getInt(USER_ID, 0));
             loginUser.setNickName(pref.getString(USER_NICK_NAME, ""));
+            loginUser.setEmail(pref.getString(USER_E_MAIL, ""));
 
         }
 

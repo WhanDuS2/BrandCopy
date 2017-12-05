@@ -19,7 +19,7 @@ import java.util.Map;
 public class ServerUtil {
 
     private static final String TAG = ServerUtil.class.getSimpleName();
-    private final static String BASE_URL = "http://192.168.100.105:8080/"; // 라이브서버
+    private final static String BASE_URL = "http://192.168.20.54:8080/"; // 라이브서버
 //    private final static String BASE_URL = "http://share-tdd.com/"; // 개발서버
 
     public interface JsonResponseHandler {
@@ -28,9 +28,9 @@ public class ServerUtil {
 
 
     //  관리자 게시물 기능
-    public static void insert_new_post(final Context context, int userId, int postClassification, int views, String content,
-                                       String profileURL, String title, final JsonResponseHandler handler) {
-        String url = BASE_URL + "fmpic/insert_new_post";
+    public static void get_new_post(final Context context, int userId, int postClassification, int views, String content,
+                                       String profileURL, String title, String isnotice, final JsonResponseHandler handler) {
+        String url = BASE_URL + "fmpic/get_new_post";
 //        		String registrationId = ContextUtil.getRegistrationId(context);
 
         Map<String, String> data = new HashMap<String, String>();
@@ -40,6 +40,7 @@ public class ServerUtil {
         data.put("content", content);
         data.put("profileURL", profileURL);
         data.put("title", title);
+        data.put("isnotice", isnotice);
 
         AsyncHttpRequest.post(context, url, data, true, new AsyncHttpRequest.HttpResponseHandler() {
 

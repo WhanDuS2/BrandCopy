@@ -12,6 +12,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class SignUpActivity extends BaseActivity {
 
 
@@ -146,4 +149,31 @@ public class SignUpActivity extends BaseActivity {
         this.backIMG = (ImageView) findViewById(R.id.backIMG);
 
     }
+
+
+    public boolean validatePassword(String pwStr) {
+        Pattern pattern;
+        Matcher matcher;
+
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,}$";
+
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(pwStr);
+
+        return matcher.matches();
+    }
+
+//    8자리 이상 , 특수문자 포함된 비밀번호 입력요구 할 때
+
+//    public boolean validatePassword(String pwStr) {
+//        Pattern pattern;
+//        Matcher matcher;
+//
+//        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$";
+//
+//        pattern = Pattern.compile(PASSWORD_PATTERN);
+//        matcher = pattern.matcher(pwStr);
+//
+//        return matcher.matches();
+//    }
 }

@@ -37,30 +37,27 @@ public class GuideActivity extends BaseActivity {
             }
         });
 
-
-        userGuliePhotoOne.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener viewPagerIntent = new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mContext, UserGulieActivityOne.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, ImageViewPagerActivity.class);
+                if (v.getId() == R.id.userGuliePhotoOne) {
+                    intent.putExtra("position", 0);
+                } else if (v.getId() == R.id.userGuliePhotoTwo) {
+                    intent.putExtra("position", 1);
+                } else if (v.getId() == R.id.userGuliePhotoThree) {
+                    intent.putExtra("position", 2);
+                }
                 startActivity(intent);
             }
-        });
+        };
 
-        userGuliePhotoTwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mContext, UserGulieActivityTwo.class);
-                startActivity(intent);
-            }
-        });
 
-        userGuliePhotoThree.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mContext, UserGulieActivityThree.class);
-                startActivity(intent);
-            }
-        });
+        userGuliePhotoOne.setOnClickListener(viewPagerIntent);
+
+        userGuliePhotoTwo.setOnClickListener(viewPagerIntent);
+
+        userGuliePhotoThree.setOnClickListener(viewPagerIntent);
 
 
     }

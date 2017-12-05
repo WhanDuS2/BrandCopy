@@ -23,7 +23,14 @@ public class UserData implements Serializable {
         try {
             user.setUserId(json.getInt("id"));
             user.setNickName(json.getString("nickname"));
-                user.setEmail(json.getString("e_mail"));
+            user.setEmail(json.getString("e_mail"));
+            if (json.getInt("ismanager") == 1) {
+
+                user.setManager(true);
+            } else {
+
+                user.setManager(false);
+            }
 
         } catch (JSONException e) {
             e.printStackTrace();

@@ -40,7 +40,6 @@
         <activity android:name=".ForgetIdActivity" />
         <activity android:name=".UserWritePostingActivity" />
         <activity android:name=".ImageViewPagerActivity" />
-        <activity android:name=".UserPostingActivity"></activity>
     </application>
 
 </manifest>

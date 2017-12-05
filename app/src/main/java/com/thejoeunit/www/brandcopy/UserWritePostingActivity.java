@@ -16,6 +16,8 @@ public class UserWritePostingActivity extends BaseActivity {
     private android.widget.EditText editText;
     private android.widget.Button enterBtn;
     private android.widget.Button cancelBtn;
+    private EditText pwEdt;
+    private EditText contentEdt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,10 +59,10 @@ public class UserWritePostingActivity extends BaseActivity {
 
     @Override
     public void bindViews() {
-
         this.cancelBtn = (Button) findViewById(R.id.cancelBtn);
         this.enterBtn = (Button) findViewById(R.id.enterBtn);
-        this.editText = (EditText) findViewById(R.id.editText);
+        this.pwEdt = (EditText) findViewById(R.id.pwEdt);
+        this.contentEdt = (EditText) findViewById(R.id.contentEdt);
         this.titleTxt = (TextView) findViewById(R.id.titleTxt);
         this.backIMG = (ImageView) findViewById(R.id.backIMG);
     }

@@ -12,6 +12,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.thejoeunit.www.brandcopy.util.ServerUtil;
+
+import org.json.JSONObject;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -48,26 +52,34 @@ public class SignUpActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
 
+                if (!isPwOk) {
+                    Toast.makeText(mContext, "비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
+                ServerUtil.insert_new_user(mContext, nickNameEdt.getText().toString(), emailAddressEdt.getText().toString(), pwEdt.getText().toString(), new ServerUtil.JsonResponseHandler() {
+                    @Override
+                    public void onResponse(JSONObject json) {
+
+                        Toast.makeText(mContext, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                        finish();
+
+                    }
+                });
 
 //                if (!isIdOk) {
 //                    Toast.makeText(mContext, "아이디를 확인해주세요.", Toast.LENGTH_SHORT).show();
 //                    return;
 //                }
 
-                if (!isPwOk) {
-                    Toast.makeText(mContext, "비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
 
 //                if (!isNickNameOk) {
 //                    Toast.makeText(mContext, "닉네임을 확인해주세요.", Toast.LENGTH_SHORT).show();
 //                    return;
 //                }
 
-                Toast.makeText(mContext, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(mContext, MainActivity.class);
-                startActivity(intent);
-                finish();
+
 
 
             }

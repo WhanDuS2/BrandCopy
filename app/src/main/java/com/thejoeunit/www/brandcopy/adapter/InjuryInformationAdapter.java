@@ -7,7 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.thejoeunit.www.brandcopy.R;
 import com.thejoeunit.www.brandcopy.data.PostingData;
 
@@ -49,11 +51,12 @@ public class InjuryInformationAdapter extends ArrayAdapter<PostingData> {
 ///       Glide.with(mContext).load("https://scontent-atl3-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/19367550_140730239832370_3000554952889204736_n.jpg").into(nailDesignImg);
 
 
+        ImageView mainIMG = (ImageView) row.findViewById(R.id.mainIMG);
+
+        Glide.with(mContext).load(R.drawable.fm_logo_post).into(mainIMG);
+
+
         return row;
     }
 
-    @Override
-    public int getCount() {
-        return 20;
-    }
 }

@@ -52,11 +52,6 @@ public class ServiceCenterAdapter extends ArrayAdapter<PostingData> {
         return row;
     }
 
-    @Override
-    public int getCount() {
-        return 20;
-    }
-
     /**
      * Created by the on 2017-11-21.
      */

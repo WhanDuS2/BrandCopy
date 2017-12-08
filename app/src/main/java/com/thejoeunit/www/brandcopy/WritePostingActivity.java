@@ -20,7 +20,6 @@ public class WritePostingActivity extends BaseActivity {
     private android.widget.ImageView backIMG;
     private android.widget.TextView titleTxt;
     private android.widget.EditText editText;
-    private android.widget.ImageView imageView;
     private android.widget.Button upLoadFileBtn;
     private android.widget.Button enterBtn;
     private android.widget.Button cancelBtn;
@@ -28,6 +27,8 @@ public class WritePostingActivity extends BaseActivity {
     private EditText contentEdt;
     private EditText titleEdt;
     private android.widget.CheckBox isNoticeCheckBox;
+    private ImageView noticeIMG;
+    private ImageView fmIMG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,13 @@ public class WritePostingActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+
+        cancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         backIMG.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +69,7 @@ public class WritePostingActivity extends BaseActivity {
                     notice = "0";
                 }
 
-                ServerUtil.get_new_post(mContext, ContextUtil.getLoginUser(mContext).getUserId(), postClassificationSpinner.getSelectedItemPosition(), 0, contentEdt.getText().toString(), "", titleEdt.getText().toString(), notice,
+                ServerUtil.get_new_admin_post(mContext, ContextUtil.getLoginUser(mContext).getUserId(), postClassificationSpinner.getSelectedItemPosition(), 150, contentEdt.getText().toString(), "", titleEdt.getText().toString(), notice,
                         new ServerUtil.JsonResponseHandler() {
                             @Override
                             public void onResponse(JSONObject json) {
@@ -84,7 +92,8 @@ public class WritePostingActivity extends BaseActivity {
         this.enterBtn = (Button) findViewById(R.id.enterBtn);
         this.upLoadFileBtn = (Button) findViewById(R.id.upLoadFileBtn);
         this.isNoticeCheckBox = (CheckBox) findViewById(R.id.isNoticeCheckBox);
-        this.imageView = (ImageView) findViewById(R.id.imageView);
+        this.fmIMG = (ImageView) findViewById(R.id.fmIMG);
+        this.noticeIMG = (ImageView) findViewById(R.id.noticeIMG);
         this.contentEdt = (EditText) findViewById(R.id.contentEdt);
         this.titleEdt = (EditText) findViewById(R.id.titleEdt);
         this.postClassificationSpinner = (Spinner) findViewById(R.id.postClassificationSpinner);

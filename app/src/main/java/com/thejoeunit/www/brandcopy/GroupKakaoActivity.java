@@ -44,7 +44,7 @@ public class GroupKakaoActivity extends BaseActivity {
 
     @Override
     public void bindViews() {
-        this.kakaofamilyIMG = (PhotoView) findViewById(R.id.kakaofamilyIMG);
+
         this.backIMG = (ImageView) findViewById(R.id.backIMG);
 
     }

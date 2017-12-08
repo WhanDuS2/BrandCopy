@@ -9,14 +9,15 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:paddingTop="3dp"
-            android:paddingBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="3dp">
 
             <ImageView
+                android:id="@+id/mainIMG"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="5dp"

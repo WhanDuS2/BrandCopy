@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="#FAE100"
     android:layout_height="match_parent"
+    android:background="#FAE100"
+    android:orientation="vertical"
     tools:context="com.thejoeunit.www.brandcopy.GroupKakaoActivity">
 
     <ScrollView
@@ -19,22 +19,22 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
+                android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:layout_height="wrap_content">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/backIMG"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/back_icon"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/back_icon" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
 
 
                 <TextView
@@ -49,17 +49,67 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/group_kakao_gulie_one" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/group_kakao_gulie_two" />
+
 
             </LinearLayout>
 
 
-            <com.github.chrisbanes.photoview.PhotoView
-                android:id="@+id/kakaofamilyIMG"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/kakao_familyroomguile" />
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/group_kakao_gulie_three" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/kakao_id_activity" />
+
+
+            </LinearLayout>
+
+
+            <!--<com.github.chrisbanes.photoview.PhotoView-->
+            <!--android:id="@+id/kakaofamilyIMG"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:src="" />-->
 
 
         </LinearLayout>

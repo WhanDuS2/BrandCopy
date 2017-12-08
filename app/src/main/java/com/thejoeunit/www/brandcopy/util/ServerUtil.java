@@ -19,7 +19,7 @@ import java.util.Map;
 public class ServerUtil {
 
     private static final String TAG = ServerUtil.class.getSimpleName();
-    private final static String BASE_URL = "http://192.168.20.54:8080/"; // 라이브서버
+    private final static String BASE_URL = "http://192.168.100.122:8080/"; // 라이브서버
 //    private final static String BASE_URL = "http://share-tdd.com/"; // 개발서버
 
     public interface JsonResponseHandler {
@@ -27,10 +27,59 @@ public class ServerUtil {
     }
 
 
+    //  유저 게시물 기능
+    public static void get_new_user_post(final Context context, int userId, int views, String content,
+                                    String title, String guest_nickname, String guest_password, final JsonResponseHandler handler) {
+        String url = BASE_URL + "fmpic/get_new_user_post";
+//        		String registrationId = ContextUtil.getRegistrationId(context);
+
+        Map<String, String> data = new HashMap<String, String>();
+        data.put("user_id", userId + "");
+        data.put("postClassification", "4");
+        data.put("views", views + "");
+        data.put("content", content);
+        data.put("title", title);
+        data.put("guest_nickname", guest_nickname);
+        data.put("guest_password", guest_password);
+
+        AsyncHttpRequest.post(context, url, data, true, new AsyncHttpRequest.HttpResponseHandler() {
+
+            @Override
+            public boolean onPrepare() {
+                return true;
+            }
+
+            @Override
+            public void onResponse(String response) {
+                System.out.println(response);
+                try {
+                    JSONObject json = new JSONObject(response);
+
+                    if (handler != null)
+                        handler.onResponse(json);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+
+            @Override
+            public void onCancelled() {
+
+            }
+
+        });
+    }
+
+
     //  관리자 게시물 기능
-    public static void get_new_post(final Context context, int userId, int postClassification, int views, String content,
-                                       String profileURL, String title, String isnotice, final JsonResponseHandler handler) {
-        String url = BASE_URL + "fmpic/get_new_post";
+    public static void get_new_admin_post(final Context context, int userId, int postClassification, int views, String content,
+                                    String profileURL, String title, String isnotice, final JsonResponseHandler handler) {
+        String url = BASE_URL + "fmpic/get_new_admin_post";
 //        		String registrationId = ContextUtil.getRegistrationId(context);
 
         Map<String, String> data = new HashMap<String, String>();

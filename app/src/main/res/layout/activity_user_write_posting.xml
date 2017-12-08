@@ -30,7 +30,6 @@
 
 
         <TextView
-            android:id="@+id/titleTxt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -72,6 +71,7 @@
 
 
         <EditText
+            android:id="@+id/titleEdt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -129,12 +129,45 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:text="유저닉네임 설정 : "
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/nickNameEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:gravity="center"
+            android:hint="닉네임 입력"
+            android:inputType="text" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/red_star" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:text="비밀번호 설정 : "
             android:textColor="#000000"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/pwEdt"
+            android:id="@+id/userPwEdt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#00000000"

@@ -9,27 +9,33 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@drawable/fm_logo"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/fm_main_logoo"
         android:orientation="horizontal">
 
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:background="#FFFFFF"
-        android:layout_height="10dp" />
+        android:layout_height="10dp"
+        android:background="#FFFFFF" />
 
     <TextView
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#22B14C"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
-
+        android:text="No.1 픽application, FM PICK!"
+        android:layout_height="30dp" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="5dp">
@@ -107,7 +113,25 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="2dp">
 
+        <TextView
+            android:background="#E318A7"
+            android:layout_marginLeft="30dp"
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
 
     <LinearLayout
@@ -190,6 +214,25 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="2dp">
+
+        <TextView
+            android:background="#E318A7"
+            android:layout_marginLeft="30dp"
+            android:layout_width="0dp"
+            android:layout_weight="6.5"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
 
 
@@ -273,6 +316,24 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="2dp">
+
+        <TextView
+            android:background="#E318A7"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="0dp"
+            android:layout_weight="5.5"
+            android:layout_height="1dp" />
+
+
+    </LinearLayout>
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -281,16 +342,50 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@drawable/kakao"
+        android:background="#F9E900"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/kakao_icon_main" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="고객센터 카카오톡 : "
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="k1122c "
+            android:textColor="#11DBCF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
 
     </LinearLayout>
 
+
     <LinearLayout
-        android:background="#FEE8AC"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="bottom"
+        android:background="#FEE8AC"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -325,10 +420,10 @@
             android:tag="3">
 
             <ImageView
-                android:padding="4dp"
                 android:id="@+id/loginIMG"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
+                android:padding="4dp"
                 android:src="@drawable/login_icon" />
 
             <TextView

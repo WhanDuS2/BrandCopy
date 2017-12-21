@@ -126,9 +126,9 @@ public class MainActivity extends BaseActivity {
         groupKakaoIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(mContext, GroupKakaoActivity.class);
-                Intent intent = new Intent(mContext, WebViewActivity.class);
-                intent.putExtra("intent", "4");
+                Intent intent = new Intent(mContext, GroupKakaoActivity.class);
+//                Intent intent = new Intent(mContext, WebViewActivity.class);
+//                intent.putExtra("intent", "4");
                 startActivity(intent);
             }
         });
@@ -191,15 +191,15 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setValues() {
 
-//        Glide.with(mContext).load(R.drawable.analysis_icon).into(analysisIMG);
-//        Glide.with(mContext).load(R.drawable.notice_iconn).into(noticeIMG);
-//        Glide.with(mContext).load(R.drawable.score_icon).into(totalScoreIMG);
-//        Glide.with(mContext).load(R.drawable.danger_iconn).into(dangerIMG);
-//        Glide.with(mContext).load(R.drawable.family_icon).into(groupKakaoIMG);
-//        Glide.with(mContext).load(R.drawable.injury_iconn).into(injuryIMG);
-//        Glide.with(mContext).load(R.drawable.guliedance_cion).into(gulieIMG);
-//        Glide.with(mContext).load(R.drawable.question_icon).into(kakaoQuestionIMG);
-//        Glide.with(mContext).load(R.drawable.service_icon).into(serviceCenterIMG);
+        Glide.with(mContext).load(R.drawable.analysis_icon).into(analysisIMG);
+        Glide.with(mContext).load(R.drawable.notice_iconn).into(noticeIMG);
+        Glide.with(mContext).load(R.drawable.score_icon).into(totalScoreIMG);
+        Glide.with(mContext).load(R.drawable.danger_iconn).into(dangerIMG);
+        Glide.with(mContext).load(R.drawable.family_icon).into(groupKakaoIMG);
+        Glide.with(mContext).load(R.drawable.injury_iconn).into(injuryIMG);
+        Glide.with(mContext).load(R.drawable.guliedance_cion).into(gulieIMG);
+        Glide.with(mContext).load(R.drawable.question_icon).into(kakaoQuestionIMG);
+        Glide.with(mContext).load(R.drawable.service_icon).into(serviceCenterIMG);
 
     }
 

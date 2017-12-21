@@ -40,6 +40,8 @@
         <activity android:name=".ForgetIdActivity" />
         <activity android:name=".UserWritePostingActivity" />
         <activity android:name=".ImageViewPagerActivity" />
+        <activity android:name=".WebViewActivity" />
+        <activity android:name=".LoginWebViewActivity"></activity>
     </application>
 
 </manifest>

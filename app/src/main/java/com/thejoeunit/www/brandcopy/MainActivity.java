@@ -41,7 +41,6 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         bindViews();
         setupEvents();
         setValues();
@@ -97,7 +96,9 @@ public class MainActivity extends BaseActivity {
         serviceCenterIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, ServiceCenterActivity.class);
+//                Intent intent = new Intent(mContext, ServiceCenterActivity.class);
+                Intent intent = new Intent(mContext, WebViewActivity.class);
+                intent.putExtra("intent", "6");
                 startActivity(intent);
             }
         });
@@ -114,7 +115,9 @@ public class MainActivity extends BaseActivity {
         injuryIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, InjuryInformationActivity.class);
+//                Intent intent = new Intent(mContext, InjuryInformationActivity.class);
+                Intent intent = new Intent(mContext, WebViewActivity.class);
+                intent.putExtra("intent", "5");
                 startActivity(intent);
             }
         });
@@ -123,7 +126,9 @@ public class MainActivity extends BaseActivity {
         groupKakaoIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, GroupKakaoActivity.class);
+//                Intent intent = new Intent(mContext, GroupKakaoActivity.class);
+                Intent intent = new Intent(mContext, WebViewActivity.class);
+                intent.putExtra("intent", "4");
                 startActivity(intent);
             }
         });
@@ -132,7 +137,9 @@ public class MainActivity extends BaseActivity {
         dangerIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, DangerActivity.class);
+//                Intent intent = new Intent(mContext, DangerActivity.class);
+                Intent intent = new Intent(mContext, WebViewActivity.class);
+                intent.putExtra("intent", "3");
                 startActivity(intent);
             }
         });
@@ -141,7 +148,9 @@ public class MainActivity extends BaseActivity {
         analysisIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, AnalysisActivity.class);
+//                Intent intent = new Intent(mContext, AnalysisActivity.class);
+                Intent intent = new Intent(mContext, WebViewActivity.class);
+                intent.putExtra("intent", "1");
                 startActivity(intent);
             }
         });
@@ -150,7 +159,9 @@ public class MainActivity extends BaseActivity {
         noticeIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, NoticeActivity.class);
+//                Intent intent = new Intent(mContext, NoticeActivity.class);
+                Intent intent = new Intent(mContext, WebViewActivity.class);
+                intent.putExtra("intent", "2");
                 startActivity(intent);
             }
         });
@@ -158,7 +169,8 @@ public class MainActivity extends BaseActivity {
         loginIMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, LoginActivity.class);
+//                Intent intent = new Intent(mContext, LoginActivity.class);
+                Intent intent = new Intent(mContext, LoginWebViewActivity.class);
                 startActivity(intent);
             }
         });
@@ -179,15 +191,15 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setValues() {
 
-        Glide.with(mContext).load(R.drawable.analysis_icon).into(analysisIMG);
-        Glide.with(mContext).load(R.drawable.notice_iconn).into(noticeIMG);
-        Glide.with(mContext).load(R.drawable.score_icon).into(totalScoreIMG);
-        Glide.with(mContext).load(R.drawable.danger_iconn).into(dangerIMG);
-        Glide.with(mContext).load(R.drawable.family_icon).into(groupKakaoIMG);
-        Glide.with(mContext).load(R.drawable.injury_iconn).into(injuryIMG);
-        Glide.with(mContext).load(R.drawable.guliedance_cion).into(gulieIMG);
-        Glide.with(mContext).load(R.drawable.question_icon).into(kakaoQuestionIMG);
-        Glide.with(mContext).load(R.drawable.service_icon).into(serviceCenterIMG);
+//        Glide.with(mContext).load(R.drawable.analysis_icon).into(analysisIMG);
+//        Glide.with(mContext).load(R.drawable.notice_iconn).into(noticeIMG);
+//        Glide.with(mContext).load(R.drawable.score_icon).into(totalScoreIMG);
+//        Glide.with(mContext).load(R.drawable.danger_iconn).into(dangerIMG);
+//        Glide.with(mContext).load(R.drawable.family_icon).into(groupKakaoIMG);
+//        Glide.with(mContext).load(R.drawable.injury_iconn).into(injuryIMG);
+//        Glide.with(mContext).load(R.drawable.guliedance_cion).into(gulieIMG);
+//        Glide.with(mContext).load(R.drawable.question_icon).into(kakaoQuestionIMG);
+//        Glide.with(mContext).load(R.drawable.service_icon).into(serviceCenterIMG);
 
     }
 

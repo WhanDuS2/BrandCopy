@@ -41,7 +41,7 @@ public class LoginWebViewActivity extends BaseActivity {
             }
         });
 
-        mWebView.loadUrl("http://hyuni106.dothome.co.kr/g5/bbs/login.php");
+        mWebView.loadUrl("http://hyuni106.dothome.co.kr/xe/login");
 
     }
 

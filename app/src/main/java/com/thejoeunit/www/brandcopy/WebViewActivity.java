@@ -189,19 +189,16 @@ public class WebViewActivity extends BaseActivity {
         });
 
         if (intentInfo.equals("1")) {
-            url = "http://dododo.raonnet.com/xe/index.php?mid=board";
+            url = "http://hyuni106.dothome.co.kr/xe/board_ZtJX22";
         } else if (intentInfo.equals("2")) {
-            url = "http://hyuni106.dothome.co.kr/g5/bbs/board.php?bo_table=test1";
+            url = "http://hyuni106.dothome.co.kr/xe/board_FpFt08";
         } else if (intentInfo.equals("3")) {
-            url = "http://hyuni106.dothome.co.kr/g5/bbs/board.php?bo_table=danger";
-        } else if (intentInfo.equals("4")) {
-            url = "http://hyuni106.dothome.co.kr/g5/bbs/board.php?bo_table=group";
+            url = "http://hyuni106.dothome.co.kr/xe/board_ZpRM25";
         } else if (intentInfo.equals("5")) {
-            url = "http://hyuni106.dothome.co.kr/g5/bbs/board.php?bo_table=injury";
+            url = "http://hyuni106.dothome.co.kr/xe/board_UNYK40";
         } else if (intentInfo.equals("6")) {
-            url = "http://hyuni106.dothome.co.kr/g5/bbs/board.php?bo_table=service";
+            url = "http://hyuni106.dothome.co.kr/xe/board_gVYi58";
         }
-        mWebView.setWebViewClient(new WebViewClient());
 
         mWebView.loadUrl(url);
     }
